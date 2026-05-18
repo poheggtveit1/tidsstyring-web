@@ -6,11 +6,14 @@ export function DisplayNumberDropdown() {
   const displayNumbers = useJobProfile((s) => s.displayNumbers);
   const selectedId = useJobProfile((s) => s.selectedDisplayNumberId);
   const setSelected = useJobProfile((s) => s.setSelectedDisplayNumber);
+  const enabled = useJobProfile((s) => s.enabled);
 
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  const selected = displayNumbers.find((n) => n.id === selectedId);
+  // When Jobbprofil is off, always display "Mitt nummer"
+  const effectiveId = enabled ? selectedId : 'mitt-nummer';
+  const selected = displayNumbers.find((n) => n.id === effectiveId);
 
   useEffect(() => {
     function onDocClick(e: MouseEvent) {
@@ -51,7 +54,7 @@ export function DisplayNumberDropdown() {
             className="absolute z-10 mt-1 max-h-64 w-full overflow-auto rounded-[var(--radius-field)] border border-ink-200 bg-surface py-2 shadow-lg"
           >
             {displayNumbers.map((n) => {
-              const active = n.id === selectedId;
+              const active = n.id === effectiveId;
               return (
                 <li key={n.id} role="option" aria-selected={active}>
                   <button

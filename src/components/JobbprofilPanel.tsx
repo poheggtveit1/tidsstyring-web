@@ -41,7 +41,7 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
   const externalOnly = useJobProfile((s) => s.externalOnly);
   const setExternalOnly = useJobProfile((s) => s.setExternalOnly);
   const selectedDisplayNumberId = useJobProfile((s) => s.selectedDisplayNumberId);
-  const externalOnlyDisabled = selectedDisplayNumberId === 'mitt-nummer';
+  const externalOnlyDisabled = selectedDisplayNumberId === 'mitt-nummer' || !enabled;
 
   const [wizardOpen, setWizardOpen] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
