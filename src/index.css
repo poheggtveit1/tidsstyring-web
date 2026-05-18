@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* Figma-derived design tokens (MBN | Web — Page / Index) */
+@theme {
+  --font-sans: "Inter", "Telenor Evolution UI", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand */
+  --color-brand-50:  #ebf3ff;
+  --color-brand-500: #1020f9;
+  --color-brand-600: #0e1bd0;
+
+  /* Neutrals */
+  --color-ink-900:   #18223f;
+  --color-ink-800:   #293351;
+  --color-ink-600:   #4f5b7d;
+  --color-ink-500:   #677398;
+  --color-ink-400:   #7c88ab;
+  --color-ink-300:   #b2bace;
+  --color-ink-200:   #e6e8ef;
+  --color-ink-100:   #f0f1f5;
+
+  /* Surfaces */
+  --color-surface:        #ffffff;
+  --color-surface-alt:    #f9f9fb;
+  --color-surface-warn:   #fffdeb;
+  --color-page:           #f9f9fb;
+
+  /* Status badge colours — from Figma text colours */
+  --color-status-ledig-text:     #111522;
+  --color-status-ledig-bg:       #d4f5d6;
+  --color-status-ledig-dot:      #178122;
+  --color-status-borte-text:     #5c2600;
+  --color-status-borte-bg:       #ffe5cc;
+  --color-status-borte-dot:      #f57c00;
+  --color-status-frakoblet-text: #293351;
+  --color-status-frakoblet-bg:   #e5e8f0;
+  --color-status-frakoblet-dot:  #7c88ab;
+  --color-status-opptatt-text:   #5c0000;
+  --color-status-opptatt-bg:     #ffe0e0;
+  --color-status-opptatt-dot:    #d32f2f;
+
+  /* Action button colours */
+  --color-action-call:    #178122;
+  --color-action-call-fg: #f5ffff;
+  --color-action-msg-fg:  #f5ffff;
+
+  /* Status */
+  --color-danger-600: #c70505;
+
+  /* Radii */
+  --radius-card:  16px;
+  --radius-field: 8px;
+
+  /* Animations */
+  --animate-tab-enter: tab-enter 220ms ease-out both;
+}
+
+@keyframes tab-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-page);
+  color: var(--color-ink-800);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: auto;
+}
+
+button { font: inherit; cursor: pointer; }
+* { box-sizing: border-box; }
