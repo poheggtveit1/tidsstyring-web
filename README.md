@@ -1,3 +1,7 @@
+# MBN Web – Jobbprofil
+
+Interaktiv HTML-mockup for jobbprofil- og tidsstyringsfunksjonalitet i MBN på web. Prototypen er bygget med ren HTML, CSS og JavaScript — ingen byggsteg nødvendig.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
