@@ -31,10 +31,8 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
   const tidsstyringActive = useJobProfile((s) => s.tidsstyringActive);
   const setTidsstyringActive = useJobProfile((s) => s.setTidsstyringActive);
   const tidsstyringConfigured = useJobProfile((s) => s.tidsstyringConfigured);
-  const tidsstyringStatus = useJobProfile((s) => s.tidsstyringStatus);
   const tidsstyringTimeFrom = useJobProfile((s) => s.tidsstyringTimeFrom);
   const tidsstyringTimeTo = useJobProfile((s) => s.tidsstyringTimeTo);
-  const tidsstyringQueueCount = useJobProfile((s) => s.tidsstyringQueueCount);
   const timePeriods           = useJobProfile((s) => s.timePeriods);
   const finalizeWizardPeriod  = useJobProfile((s) => s.finalizeWizardPeriod);
 
