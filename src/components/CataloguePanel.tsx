@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {
-  Search, SlidersHorizontal, LayoutList, LayoutGrid,
+  Search, SlidersHorizontal,
   ArrowDown, Phone, MessageSquare, PhoneForwarded, Voicemail,
   MoreHorizontal,
 } from 'lucide-react';
@@ -29,7 +29,6 @@ function TeamsIcon() {
 
 export function CataloguePanel() {
   const [activeTab, setActiveTab] = useState<CatalogueTab>('Bedriftskatalog');
-  const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
   const [search, setSearch] = useState('');
   const filtered = CONTACTS.filter((c) => {
     const q = search.toLowerCase();
@@ -74,7 +73,7 @@ export function CataloguePanel() {
       {/* ── Search + controls ── */}
       <div className="flex items-center gap-3 border-b border-ink-300 px-4 py-6">
         {/* Search */}
-        <div className="relative flex-1">
+        <div className="relative w-1/2">
           <Search
             size={18}
             strokeWidth={1.75}
@@ -98,29 +97,6 @@ export function CataloguePanel() {
           Filter
         </button>
 
-        {/* List / Grid toggle */}
-        <div className="flex shrink-0 items-center rounded-full bg-ink-200 p-1">
-          <button
-            type="button"
-            onClick={() => setViewMode('list')}
-            aria-label="Listevisning"
-            className={`flex h-[42px] w-[42px] items-center justify-center rounded-full transition ${
-              viewMode === 'list' ? 'bg-surface text-ink-800 shadow-sm' : 'text-ink-500 hover:bg-ink-100'
-            }`}
-          >
-            <LayoutList size={18} strokeWidth={1.75} />
-          </button>
-          <button
-            type="button"
-            onClick={() => setViewMode('grid')}
-            aria-label="Rutenettvisning"
-            className={`flex h-[42px] w-[42px] items-center justify-center rounded-full transition ${
-              viewMode === 'grid' ? 'bg-surface text-ink-800 shadow-sm' : 'text-ink-500 hover:bg-ink-100'
-            }`}
-          >
-            <LayoutGrid size={18} strokeWidth={1.75} />
-          </button>
-        </div>
       </div>
 
 
