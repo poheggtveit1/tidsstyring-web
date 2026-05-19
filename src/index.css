@@ -53,6 +53,12 @@
 
   /* Animations */
   --animate-tab-enter: tab-enter 220ms ease-out both;
+  --animate-slide-in-left: slide-in-left 260ms cubic-bezier(0.32,0,0.08,1) both;
+}
+
+@keyframes slide-in-left {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
 }
 
 @keyframes tab-enter {

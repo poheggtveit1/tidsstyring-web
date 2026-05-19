@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { Bell, MessageSquare, Pause, LogOut, Menu } from 'lucide-react';
+import { NavSidebar } from './NavSidebar';
 
 function TelenorLogo() {
   return (
@@ -17,6 +19,8 @@ interface TopNavProps {
 }
 
 export function TopNav({ activeTab, onTabChange, onLogout }: TopNavProps) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <header className="flex h-[60px] shrink-0 items-center justify-between border-b border-ink-200 bg-surface px-4">
       {/* Left: logo + hamburger */}
@@ -25,11 +29,14 @@ export function TopNav({ activeTab, onTabChange, onLogout }: TopNavProps) {
         <button
           type="button"
           aria-label="Meny"
+          onClick={() => setSidebarOpen(true)}
           className="flex h-9 w-9 items-center justify-center rounded-full text-brand-500 hover:bg-brand-50 transition"
         >
           <Menu size={20} strokeWidth={1.75} />
         </button>
       </div>
+
+      {sidebarOpen && <NavSidebar onClose={() => setSidebarOpen(false)} />}
 
       {/* Centre: segmented control */}
       <div className="flex items-center gap-1 rounded-full bg-ink-200 p-1">
