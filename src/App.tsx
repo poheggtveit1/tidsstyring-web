@@ -13,7 +13,7 @@ import { MineKoerPanel } from './components/MineKoerPanel';
 type AppView = 'main' | 'settings';
 
 export default function App() {
-  const [navTab, setNavTab] = useState<'sentralbord' | 'mitt-mbn'>('mitt-mbn');
+  const [navTab, setNavTab] = useState<'sentralbord' | 'mitt-mbn'>('sentralbord');
   const [rightCollapsed, setRightCollapsed] = useState(false);
   const [view, setView] = useState<AppView>('main');
   const reset = useJobProfile((s) => s.reset);
