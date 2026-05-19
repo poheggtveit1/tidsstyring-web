@@ -20,7 +20,7 @@ export default function App() {
 
   function handleLogout() {
     reset();
-    setNavTab('mitt-mbn');
+    setNavTab('sentralbord');
     setRightCollapsed(false);
     setView('main');
   }

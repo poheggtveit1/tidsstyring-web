@@ -1,32 +1,57 @@
-import { useEffect } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
   ArrowRight, Settings, LifeBuoy,
-  Megaphone, Download, LogOut, ArrowLeftRight, User,
+  Megaphone, Download, LogOut, ArrowLeftRight, User, RotateCcw,
 } from 'lucide-react';
 
 interface Props {
   onClose: () => void;
+  onReset: () => void;
 }
 
-export function NavSidebar({ onClose }: Props) {
+export function NavSidebar({ onClose, onReset }: Props) {
+  const [closing, setClosing] = useState(false);
+  const afterCloseRef = useRef<(() => void) | null>(null);
+
+  const handleClose = useCallback((afterClose?: () => void) => {
+    afterCloseRef.current = afterClose ?? null;
+    setClosing(true);
+  }, []);
+
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') handleClose(); };
     document.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
     return () => {
       document.removeEventListener('keydown', onKey);
       document.body.style.overflow = '';
     };
-  }, [onClose]);
+  }, [handleClose]);
+
+  function handleAnimationEnd() {
+    if (closing) {
+      const cb = afterCloseRef.current;
+      onClose();
+      cb?.();
+    }
+  }
 
   const sidebar = (
     <div className="fixed inset-0 z-50 flex">
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-ink-900/50" onClick={onClose} aria-hidden="true" />
+      <div className="absolute inset-0 bg-ink-900/50" onClick={() => handleClose()} aria-hidden="true" />
 
       {/* Drawer */}
-      <div className="relative flex h-full w-[400px] max-w-[90vw] animate-slide-in-left flex-col justify-between bg-[#070452] px-16 py-16 overflow-y-auto">
+      <div
+        className="relative flex h-full w-[400px] max-w-[90vw] flex-col justify-between bg-[#070452] px-16 py-16 overflow-y-auto"
+        style={{
+          animation: closing
+            ? 'slide-out-left 220ms cubic-bezier(0.32,0,0.08,1) both'
+            : 'slide-in-left 260ms cubic-bezier(0.32,0,0.08,1) both',
+        }}
+        onAnimationEnd={handleAnimationEnd}
+      >
 
         {/* ── Main content ── */}
         <div className="flex flex-col gap-10">
@@ -76,7 +101,7 @@ export function NavSidebar({ onClose }: Props) {
         {/* ── Secondary content ── */}
         <div className="flex flex-col gap-8">
 
-          {/* Feedback + install */}
+          {/* Feedback + install + reset */}
           <div className="flex flex-col gap-4">
             <button type="button" className="flex items-center gap-3 text-left text-sm font-medium text-[#F5FFFF] transition hover:opacity-70">
               <Megaphone size={16} strokeWidth={1.75} className="shrink-0" />
@@ -85,6 +110,14 @@ export function NavSidebar({ onClose }: Props) {
             <button type="button" className="flex items-center gap-3 text-left text-sm font-medium text-[#F5FFFF] transition hover:opacity-70">
               <Download size={16} strokeWidth={1.75} className="shrink-0" />
               Installer som app
+            </button>
+            <button
+              type="button"
+              onClick={() => handleClose(onReset)}
+              className="flex items-center gap-3 text-left text-sm font-medium text-[#F5FFFF] transition hover:opacity-70"
+            >
+              <RotateCcw size={16} strokeWidth={1.75} className="shrink-0" />
+              Nullstill prototype
             </button>
           </div>
 

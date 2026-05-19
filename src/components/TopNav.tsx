@@ -36,7 +36,7 @@ export function TopNav({ activeTab, onTabChange, onLogout }: TopNavProps) {
         </button>
       </div>
 
-      {sidebarOpen && <NavSidebar onClose={() => setSidebarOpen(false)} />}
+      {sidebarOpen && <NavSidebar onClose={() => setSidebarOpen(false)} onReset={onLogout} />}
 
       {/* Centre: segmented control */}
       <div className="flex items-center gap-1 rounded-full bg-ink-200 p-1">
