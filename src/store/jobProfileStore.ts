@@ -42,7 +42,7 @@ const initialState: JobProfileState = {
   externalOnly: false,
   queues: [
     { id: 'kundeservice', name: 'Administrasjon', number: '23 00 11 22', active: false, inQueue: 4,    waitTime: '24:38',  operatorsActive: 1, operatorsTotal: 1 },
-    { id: 'salg',         name: 'Support',        number: '23 00 33 44', active: false, inQueue: null, waitTime: null,     operatorsActive: 2, operatorsTotal: 3 },
+    { id: 'salg',         name: 'Support',        number: '23 00 33 44', active: false, inQueue: 5,    waitTime: '5:03',   operatorsActive: 2, operatorsTotal: 3 },
     { id: 'resepsjon',    name: 'Verksted',        number: '23 00 99 00', active: false, inQueue: 4,    waitTime: '19:04',  operatorsActive: 1, operatorsTotal: 1 },
   ],
   timePeriods: [],
@@ -206,7 +206,7 @@ export const useJobProfile = create<JobProfileState & Actions>()(
     }),
     {
       name: 'jobbprofil-state',
-      version: 9,
+      version: 10,
     },
   ),
 );
