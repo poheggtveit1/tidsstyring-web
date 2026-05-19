@@ -2,15 +2,16 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
   ArrowRight, Settings, LifeBuoy,
-  Megaphone, Download, LogOut, ArrowLeftRight, User, RotateCcw,
+  Megaphone, Download, LogOut, ArrowLeftRight, User, RotateCcw, Play,
 } from 'lucide-react';
 
 interface Props {
   onClose: () => void;
   onReset: () => void;
+  onSimulate: () => void;
 }
 
-export function NavSidebar({ onClose, onReset }: Props) {
+export function NavSidebar({ onClose, onReset, onSimulate }: Props) {
   const [closing, setClosing] = useState(false);
   const afterCloseRef = useRef<(() => void) | null>(null);
 
@@ -90,10 +91,20 @@ export function NavSidebar({ onClose, onReset }: Props) {
               </button>
             </div>
 
-            <button type="button" className="flex items-center justify-between text-left text-lg font-medium text-[#F5FFFF] transition hover:opacity-70">
-              Mitt MBN
-              <ArrowRight size={20} strokeWidth={1.75} className="shrink-0 text-white/60" />
-            </button>
+            <div className="flex flex-col gap-3">
+              <button type="button" className="flex items-center justify-between text-left text-lg font-medium text-[#F5FFFF] transition hover:opacity-70">
+                Mitt MBN
+                <ArrowRight size={20} strokeWidth={1.75} className="shrink-0 text-white/60" />
+              </button>
+              <button
+                type="button"
+                onClick={() => handleClose(onSimulate)}
+                className="flex items-center gap-3 pl-1 text-left text-sm font-light text-white/70 transition hover:text-white"
+              >
+                <Play size={16} strokeWidth={1.75} className="shrink-0" />
+                Simuler tidsstyring dialog
+              </button>
+            </div>
 
           </nav>
         </div>

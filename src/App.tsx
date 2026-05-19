@@ -9,6 +9,7 @@ import { CataloguePanel } from './components/CataloguePanel';
 import { SettingsPage } from './components/SettingsPage';
 import { IKoPanel } from './components/IKoPanel';
 import { MineKoerPanel } from './components/MineKoerPanel';
+import { TidsstyrtPaaloggingDialog } from './components/TidsstyrtPaaloggingDialog';
 
 type AppView = 'main' | 'settings';
 
@@ -16,7 +17,33 @@ export default function App() {
   const [navTab, setNavTab] = useState<'sentralbord' | 'mitt-mbn'>('sentralbord');
   const [rightCollapsed, setRightCollapsed] = useState(false);
   const [view, setView] = useState<AppView>('main');
+  const [showSimulateDialog, setShowSimulateDialog] = useState(false);
   const reset = useJobProfile((s) => s.reset);
+  const setEnabled = useJobProfile((s) => s.setEnabled);
+  const setQueuesActive = useJobProfile((s) => s.setQueuesActive);
+  const addTimePeriod = useJobProfile((s) => s.addTimePeriod);
+  const setTidsstyringActive = useJobProfile((s) => s.setTidsstyringActive);
+
+  function handleSimulate() {
+    addTimePeriod({
+      timeFrom: '10:00',
+      timeTo: '15:00',
+      days: ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag'],
+      displayNumberId: 'support',
+      externalOnly: true,
+      queueAssignments: {
+        kundeservice: { loggedIn: false, smsVarsling: false },
+        salg:         { loggedIn: true,  smsVarsling: true },  // Support
+        resepsjon:    { loggedIn: true,  smsVarsling: true },  // Verksted
+      },
+    });
+    setEnabled(true);
+    setQueuesActive({ salg: true, resepsjon: true });
+    setTidsstyringActive(true);
+    setNavTab('sentralbord');
+    setView('main');
+    setShowSimulateDialog(true);
+  }
 
   function handleLogout() {
     reset();
@@ -28,7 +55,14 @@ export default function App() {
   return (
     <div className="flex h-screen flex-col overflow-hidden bg-surface-alt">
       {/* Top nav */}
-      <TopNav activeTab={navTab} onTabChange={setNavTab} onLogout={handleLogout} />
+      <TopNav activeTab={navTab} onTabChange={setNavTab} onLogout={handleLogout} onSimulate={handleSimulate} />
+
+      {showSimulateDialog && (
+        <TidsstyrtPaaloggingDialog
+          onClose={() => setShowSimulateDialog(false)}
+          onEndreTidsstyring={() => { setShowSimulateDialog(false); setNavTab('mitt-mbn'); }}
+        />
+      )}
 
       {view === 'settings' ? (
         <SettingsPage onBack={() => setView('main')} />
