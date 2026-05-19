@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { MoreVertical, X, Check, ChevronRight } from 'lucide-react';
+import { MoreVertical, ChevronRight } from 'lucide-react';
+import { Toast } from './Toast';
 import { useJobProfile } from '../store/jobProfileStore';
 import { Toggle } from './Toggle';
 import { DisplayNumberDropdown } from './DisplayNumberDropdown';
@@ -127,31 +128,12 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
         </div>
       </header>
 
-      {/* Activation notification */}
+      {/* Activation toast */}
       {showNotification && tidsstyringActive && (
-        <div className="mx-4 mt-4 flex items-center gap-2.5 rounded-[8px] bg-[#D8FDDC] px-4 py-3">
-          {/* Green circle with checkmark */}
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#24A831]">
-            <Check size={14} strokeWidth={3} className="text-white" />
-          </div>
-          {/* Message */}
-          <p
-            className="flex-1 text-base font-light leading-snug"
-            style={{ color: 'rgb(17,69,22)' }}
-          >
-            Tidsstyring er aktivert og klar til bruk
-          </p>
-          {/* Dismiss */}
-          <button
-            type="button"
-            onClick={() => setShowNotification(false)}
-            aria-label="Lukk"
-            className="shrink-0 transition hover:opacity-60"
-            style={{ color: 'rgb(0,11,46)' }}
-          >
-            <X size={16} strokeWidth={2} />
-          </button>
-        </div>
+        <Toast
+          message="Tidsstyring er aktivert og klar til bruk"
+          onClose={() => setShowNotification(false)}
+        />
       )}
 
       {/* Tidsstyring — three states */}
