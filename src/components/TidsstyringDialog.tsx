@@ -64,6 +64,7 @@ const DAYS = ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag', 'S�
 
 export function TidsstyringDialog({ onClose, onFinish }: Props) {
   const [step, setStep] = useState<WizardStep>('info');
+  const [hasStarted, setHasStarted] = useState(false);
 
   // Step 1: Tidsperiode
   const [timeFrom, setTimeFrom] = useState('08:00');
@@ -157,7 +158,7 @@ export function TidsstyringDialog({ onClose, onFinish }: Props) {
       aria-modal="true"
       aria-labelledby="tidsstyring-title"
     >
-      <div className="flex w-full max-w-[800px] flex-col overflow-hidden rounded-[16px] bg-surface shadow-xl">
+      <div className="flex h-[720px] max-h-[90vh] w-full max-w-[800px] flex-col overflow-hidden rounded-[16px] bg-surface shadow-xl">
 
         {/* ── Shared header ── */}
         <header className="flex items-center justify-between border-b border-ink-200 px-8 py-4">
@@ -235,10 +236,10 @@ export function TidsstyringDialog({ onClose, onFinish }: Props) {
           {step === 'info' && (
             <button
               type="button"
-              onClick={() => setStep('tidsperiode')}
+              onClick={() => { setHasStarted(true); setStep('tidsperiode'); }}
               className="flex h-12 items-center gap-2 rounded-full bg-brand-500 px-6 text-lg font-medium text-white transition hover:bg-brand-600"
             >
-              Kom i gang
+              {hasStarted ? 'Fortsett' : 'Kom i gang'}
               <ArrowRight size={20} strokeWidth={2} />
             </button>
           )}
@@ -294,7 +295,7 @@ export function TidsstyringDialog({ onClose, onFinish }: Props) {
 
 function InfoStep() {
   return (
-    <div className="flex flex-col gap-6 overflow-y-auto px-8 py-8">
+    <div className="flex flex-1 flex-col gap-6 overflow-y-auto px-8 py-8">
       <div className="flex flex-col gap-1.5">
         <p className="text-base font-medium text-ink-600">Tidsstyr jobbprofilen din</p>
         <p className="text-base font-light text-ink-600">
@@ -355,7 +356,7 @@ function TimePeriodStep({
   timeFrom, timeTo, selectedDays, onTimeFromChange, onTimeToChange, onToggleDay,
 }: TimePeriodProps) {
   return (
-    <div className="flex flex-col gap-6 overflow-y-auto px-8 py-8">
+    <div className="flex flex-1 flex-col gap-6 overflow-y-auto px-8 py-8">
 
       {/* Step progress bar */}
       <StepProgressBar activeIndex={0} />
@@ -493,7 +494,7 @@ function VisningsnummerStep({
     : null;
 
   return (
-    <div className="flex flex-col gap-6 overflow-y-auto px-8 py-8">
+    <div className="flex flex-1 flex-col gap-6 overflow-y-auto px-8 py-8">
 
       {/* Step progress bar */}
       <StepProgressBar activeIndex={1} />
@@ -548,9 +549,6 @@ function VisningsnummerStep({
 
 
 
-
-
-
     </div>
   );
 }
@@ -565,7 +563,7 @@ interface KoerProps {
 
 function KoerStep({ queues, wizardQueues, onToggle }: KoerProps) {
   return (
-    <div className="flex flex-col gap-6 px-8 py-8">
+    <div className="flex flex-1 flex-col gap-6 overflow-y-auto px-8 py-8">
 
       {/* Step progress bar */}
       <StepProgressBar activeIndex={2} />
@@ -580,9 +578,8 @@ function KoerStep({ queues, wizardQueues, onToggle }: KoerProps) {
         </p>
       </div>
 
-      {/* Queue options — scrollable, shows ~3 cards + peek at 4th */}
-      <div className="overflow-y-auto" style={{ maxHeight: '456px' }}>
-        <div className="flex flex-col gap-3">
+      {/* Queue options — scrollable within the step */}
+      <div className="flex flex-col gap-3">
           {queues.map((q) => {
             const ws = wizardQueues[q.id] ?? { loggedIn: false, smsVarsling: false };
             return (
@@ -615,7 +612,6 @@ function KoerStep({ queues, wizardQueues, onToggle }: KoerProps) {
             );
           })}
         </div>
-      </div>
 
       {/* End-of-period info */}
       <div className="flex flex-col gap-1">
@@ -679,7 +675,7 @@ function PaaOgAvloggingStep({
   onLoginModeChange: (v: LoginMode) => void;
 }) {
   return (
-    <div className="flex flex-col gap-6 overflow-y-auto px-8 py-8">
+    <div className="flex flex-1 flex-col gap-6 overflow-y-auto px-8 py-8">
 
       {/* Step progress bar */}
       <StepProgressBar activeIndex={3} />
