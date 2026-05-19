@@ -2,7 +2,7 @@ import { useState } from 'react';
 import {
   Search, SlidersHorizontal, LayoutList, LayoutGrid,
   ArrowDown, Phone, MessageSquare, PhoneForwarded, Voicemail,
-  MoreHorizontal, Check,
+  MoreHorizontal,
 } from 'lucide-react';
 import { StatusBadge } from './StatusBadge';
 import { Avatar } from './Avatar';
@@ -26,29 +26,11 @@ function TeamsIcon() {
   );
 }
 
-/** Custom checkbox matching Figma style */
-function TableCheckbox({ checked, onChange }: { checked: boolean; onChange: () => void }) {
-  return (
-    <button
-      type="button"
-      role="checkbox"
-      aria-checked={checked}
-      onClick={onChange}
-      className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-[4px] border-2 transition-colors ${
-        checked ? 'border-brand-500 bg-brand-500' : 'border-ink-300 bg-surface'
-      }`}
-    >
-      {checked && <Check size={11} strokeWidth={3} className="text-white" />}
-    </button>
-  );
-}
 
 export function CataloguePanel() {
   const [activeTab, setActiveTab] = useState<CatalogueTab>('Bedriftskatalog');
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
   const [search, setSearch] = useState('');
-  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
-
   const filtered = CONTACTS.filter((c) => {
     const q = search.toLowerCase();
     return (
@@ -58,22 +40,6 @@ export function CataloguePanel() {
       c.phone.includes(q)
     );
   });
-
-  function toggleSelect(id: string) {
-    setSelectedIds((prev) => {
-      const next = new Set(prev);
-      next.has(id) ? next.delete(id) : next.add(id);
-      return next;
-    });
-  }
-
-  const allSelected = filtered.length > 0 && filtered.every((c) => selectedIds.has(c.id));
-  const someSelected = filtered.some((c) => selectedIds.has(c.id));
-
-  function toggleAll() {
-    if (allSelected) setSelectedIds(new Set());
-    else setSelectedIds(new Set(filtered.map((c) => c.id)));
-  }
 
   return (
     <section className="flex flex-1 flex-col overflow-hidden rounded-[var(--radius-card)] bg-surface shadow-[0_2px_8px_rgba(24,34,63,0.06)]">
@@ -157,29 +123,11 @@ export function CataloguePanel() {
         </div>
       </div>
 
-      {/* ── Selection bar (shown when ≥1 row selected) ── */}
-      {someSelected && (
-        <div className="flex items-center gap-3 border-b border-ink-200 px-6 py-2">
-          <button
-            type="button"
-            onClick={() => setSelectedIds(new Set())}
-            aria-label="Fjern valg"
-            className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-50 text-brand-500 hover:bg-brand-100 transition"
-          >
-            <span className="text-lg leading-none">×</span>
-          </button>
-          <span className="text-sm font-light text-ink-800">
-            {selectedIds.size} valgt
-          </span>
-        </div>
-      )}
 
-      {/* ── Table ── */}
+{/* ── Table ── */}
       <div className="flex-1 overflow-auto">
         <table className="w-full border-separate border-spacing-y-1 px-4 pt-2">
           <colgroup>
-            {/* Checkbox */}
-            <col style={{ width: '44px' }} />
             {/* Avatar */}
             <col style={{ width: '52px' }} />
             {/* Status badge */}
@@ -200,10 +148,6 @@ export function CataloguePanel() {
 
           <thead className="sticky top-0 z-10 bg-surface">
             <tr className="text-left text-sm font-medium text-ink-600">
-              {/* Checkbox + "Status" label */}
-              <th className="py-2 pl-2">
-                <TableCheckbox checked={allSelected} onChange={toggleAll} />
-              </th>
               <th colSpan={2} className="px-2 py-2">Status</th>
               <th className="px-2 py-2">Teams</th>
               <th className="px-2 py-2">VIP</th>
@@ -219,31 +163,18 @@ export function CataloguePanel() {
             </tr>
             {/* Divider */}
             <tr aria-hidden>
-              <td colSpan={9} className="h-px bg-ink-200 p-0" />
+              <td colSpan={8} className="h-px bg-ink-200 p-0" />
             </tr>
           </thead>
 
           <tbody>
-            {filtered.map((c) => {
-              const selected = selectedIds.has(c.id);
-              return (
+            {filtered.map((c) => (
                 <tr
                   key={c.id}
-                  onClick={() => toggleSelect(c.id)}
-                  className={`h-12 cursor-pointer transition-colors [&>td]:bg-[#F9F9FB] ${
-                    selected ? '[&>td]:!bg-brand-50' : 'hover:[&>td]:!bg-surface-alt'
-                  }`}
+                  className="h-12 cursor-pointer transition-colors [&>td]:bg-[#F9F9FB] hover:[&>td]:!bg-surface-alt"
                 >
-                  {/* Checkbox */}
-                  <td className="rounded-l-lg pl-2 pr-1">
-                    <TableCheckbox
-                      checked={selected}
-                      onChange={() => toggleSelect(c.id)}
-                    />
-                  </td>
-
                   {/* Avatar */}
-                  <td className="px-1">
+                  <td className="rounded-l-lg px-1">
                     <Avatar initial={c.initial} size="sm" status={c.status} />
                   </td>
 
@@ -286,8 +217,7 @@ export function CataloguePanel() {
                     <div className="truncate">{c.department}</div>
                   </td>
                 </tr>
-              );
-            })}
+            ))}
           </tbody>
         </table>
       </div>
