@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { MoreVertical, X, Check, ChevronRight } from 'lucide-react';
 import { useJobProfile } from '../store/jobProfileStore';
 import { Toggle } from './Toggle';
@@ -45,6 +45,22 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
 
   const [wizardOpen, setWizardOpen] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    function onDocClick(e: MouseEvent) {
+      if (!menuRef.current?.contains(e.target as Node)) setMenuOpen(false);
+    }
+    function onKey(e: KeyboardEvent) { if (e.key === 'Escape') setMenuOpen(false); }
+    document.addEventListener('mousedown', onDocClick);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('mousedown', onDocClick);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [menuOpen]);
 
   useEffect(() => {
     if (!showNotification) return;
@@ -86,13 +102,29 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
             <span className="text-sm font-light text-ink-600">{statusLabel}</span>
           </div>
         </div>
-        <button
-          type="button"
-          aria-label="Flere valg"
-          className="rounded-full p-1 text-brand-500 transition hover:bg-brand-50"
-        >
-          <MoreVertical size={18} strokeWidth={2} />
-        </button>
+        <div ref={menuRef} className="relative">
+          <button
+            type="button"
+            aria-label="Flere valg"
+            onClick={() => setMenuOpen((v) => !v)}
+            className="rounded-full p-1 text-brand-500 transition hover:bg-brand-50"
+          >
+            <MoreVertical size={18} strokeWidth={2} />
+          </button>
+
+          {/* Context menu */}
+          {menuOpen && (
+            <div className="absolute right-0 top-full z-50 mt-1 w-[293px] overflow-hidden rounded-[8px] bg-white shadow-[0_2px_8px_rgba(0,26,102,0.10),0_4px_16px_rgba(0,26,102,0.05),0_1px_3px_rgba(0,26,102,0.02)]">
+              <button
+                type="button"
+                onClick={() => setMenuOpen(false)}
+                className="flex h-[49px] w-full items-center border-x border-[#7C88AB]/30 px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
+              >
+                Anropsdistribusjon
+              </button>
+            </div>
+          )}
+        </div>
       </header>
 
       {/* Activation notification */}

@@ -18,6 +18,12 @@ function TeamsIcon() {
 export function MinStatusPanel() {
   const [collapsed, setCollapsed] = useState(false);
   const [utDagen, setUtDagen] = useState(false);
+  const [statusText, setStatusText] = useState('');
+
+  function handleStatusChange(value: string) {
+    setStatusText(value);
+    if (value.length > 0) setUtDagen(true);
+  }
 
   return (
     <section className="overflow-hidden rounded-[var(--radius-card)] bg-surface shadow-[0_2px_8px_rgba(24,34,63,0.06)]">
@@ -82,9 +88,13 @@ export function MinStatusPanel() {
             {/* Text field */}
             <div className="flex flex-1 flex-col gap-2">
               <label className="text-sm font-medium text-ink-600">Hva skjer i dag?</label>
-              <div className="flex h-[50px] items-center rounded-[var(--radius-field)] border border-ink-200 bg-surface px-3 text-base font-light text-ink-500">
-                <span className="text-ink-400">Skriv en statusmelding…</span>
-              </div>
+              <input
+                type="text"
+                value={statusText}
+                onChange={(e) => handleStatusChange(e.target.value)}
+                placeholder="Skriv en statusmelding…"
+                className="h-[50px] w-full rounded-[var(--radius-field)] border border-ink-200 bg-surface px-3 text-base font-light text-ink-800 placeholder:text-ink-400 outline-none transition focus:border-brand-500"
+              />
             </div>
 
             {/* Ut dagen toggle */}
