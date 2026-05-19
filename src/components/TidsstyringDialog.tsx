@@ -538,10 +538,10 @@ function VisningsnummerStep({
           <Toggle
             on={externalOnly}
             onChange={onExternalOnlyChange}
-            ariaLabel="Bruk kun for externe samtaler"
+            ariaLabel="Bruk kun for eksterne samtaler"
           />
           <span className="text-sm font-light text-ink-800 select-none">
-            Bruk kun for externe samtaler
+            Bruk kun for eksterne samtaler
           </span>
         </div>
       )}

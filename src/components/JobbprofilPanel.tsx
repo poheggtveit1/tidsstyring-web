@@ -161,8 +161,8 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
             </div>
           )}
 
-          {/* Neste — whenever tidsstyring is configured (active or in a gap) */}
-          {tidsstyringConfigured && nextEventLabel && (
+          {/* Neste — only when tidsstyring toggle is on */}
+          {tidsstyringActive && tidsstyringConfigured && nextEventLabel && (
             <div className="flex items-baseline gap-2 text-sm font-light">
               <span className="w-14 shrink-0 text-ink-500">Neste:</span>
               <span className="text-ink-800">{nextEventLabel}</span>
@@ -193,11 +193,11 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
           <Toggle
             on={externalOnly}
             onChange={setExternalOnly}
-            ariaLabel="Bruk kun for utgående samtaler"
+            ariaLabel="Bruk kun for eksterne samtaler"
             size="md"
           />
           <span className="text-sm font-light text-ink-800 select-none">
-            Bruk kun for utgående samtaler
+            Bruk kun for eksterne samtaler
           </span>
         </div>
       )}

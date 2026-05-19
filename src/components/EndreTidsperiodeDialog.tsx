@@ -298,7 +298,7 @@ export function EndreTidsperiodeDialog({ onClose, period }: Props) {
                 />
               </button>
               <span className="text-sm font-light text-ink-800 select-none">
-                Bruk kun for externe samtaler
+                Bruk kun for eksterne samtaler
               </span>
             </div>
           </div>
