@@ -27,7 +27,7 @@ interface Props {
 
 export function PasswordGate({ children }: Props) {
   const [authenticated, setAuthenticated] = useState(
-    () => sessionStorage.getItem(SESSION_KEY) === '1',
+    () => localStorage.getItem(SESSION_KEY) === '1',
   );
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -40,7 +40,7 @@ export function PasswordGate({ children }: Props) {
     setError(false);
     const hash = await sha256(password);
     if (hash === STORED_HASH) {
-      sessionStorage.setItem(SESSION_KEY, '1');
+      localStorage.setItem(SESSION_KEY, '1');
       setAuthenticated(true);
     } else {
       setError(true);
