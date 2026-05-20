@@ -51,7 +51,7 @@ export default function App() {
   return (
     <div className="flex h-screen flex-col overflow-hidden bg-surface-alt">
       {/* Top nav */}
-      <TopNav activeTab={navTab} onTabChange={setNavTab} onLogout={handleLogout} onSimulate={handleSimulate} />
+      <TopNav activeTab={navTab} onTabChange={(t) => { setNavTab(t); setView('main'); }} onLogout={handleLogout} onSimulate={handleSimulate} onSettings={() => { setNavTab('mitt-mbn'); setView('settings'); }} />
 
       {showSimulateDialog && (
         <TidsstyrtPaaloggingDialog

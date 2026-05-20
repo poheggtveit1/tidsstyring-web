@@ -9,9 +9,10 @@ interface Props {
   onClose: () => void;
   onReset: () => void;
   onSimulate: () => void;
+  onSettings: () => void;
 }
 
-export function NavSidebar({ onClose, onReset, onSimulate }: Props) {
+export function NavSidebar({ onClose, onReset, onSimulate, onSettings }: Props) {
   const [closing, setClosing] = useState(false);
   const afterCloseRef = useRef<(() => void) | null>(null);
 
@@ -95,6 +96,14 @@ export function NavSidebar({ onClose, onReset, onSimulate }: Props) {
               <button type="button" className="flex items-center justify-between text-left text-lg font-medium text-[#F5FFFF] transition hover:opacity-70">
                 Mitt MBN
                 <ArrowRight size={20} strokeWidth={1.75} className="shrink-0 text-white/60" />
+              </button>
+              <button
+                type="button"
+                onClick={() => handleClose(onSettings)}
+                className="flex items-center gap-3 pl-1 text-left text-sm font-light text-white/70 transition hover:text-white"
+              >
+                <Settings size={16} strokeWidth={1.75} className="shrink-0" />
+                Innstillinger
               </button>
               <button
                 type="button"

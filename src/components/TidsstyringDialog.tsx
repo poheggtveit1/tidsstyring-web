@@ -83,6 +83,7 @@ export function TidsstyringDialog({ onClose, onFinish }: Props) {
   const setTidsstyringDays = useJobProfile((s) => s.setTidsstyringDays);
   const setStoredLoginMode = useJobProfile((s) => s.setLoginMode);
   const setQueuesActive = useJobProfile((s) => s.setQueuesActive);
+  const setTidsstyringActive = useJobProfile((s) => s.setTidsstyringActive);
   const [wizardDisplayId, setWizardDisplayId] = useState(storeDisplayId ?? 'mitt-nummer');
   const [wizardExternalOnly, setWizardExternalOnly] = useState(storeDisplayId !== 'mitt-nummer');
 
@@ -128,6 +129,7 @@ export function TidsstyringDialog({ onClose, onFinish }: Props) {
     setTidsstyringTimeRange(timeFrom, timeTo, queueCount);
     setTidsstyringDays(Array.from(selectedDays));
     setStoredLoginMode(loginMode);
+    setTidsstyringActive(true);
     onFinish();
   }
 

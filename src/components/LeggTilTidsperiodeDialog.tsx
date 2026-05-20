@@ -22,6 +22,8 @@ export function LeggTilTidsperiodeDialog({ onClose }: Props) {
   // Store writes
   const addTimePeriod            = useJobProfile((s) => s.addTimePeriod);
   const setQueuesActive          = useJobProfile((s) => s.setQueuesActive);
+  const setTidsstyringActive     = useJobProfile((s) => s.setTidsstyringActive);
+  const setEnabled               = useJobProfile((s) => s.setEnabled);
 
   // Local state — empty defaults for a new period
   const [timeFrom, setTimeFrom] = useState('08:00');
@@ -111,6 +113,9 @@ export function LeggTilTidsperiodeDialog({ onClose }: Props) {
     });
     // Also update live queue states so the queue table reflects the new period
     setQueuesActive(Object.fromEntries(Object.entries(queueEdits).map(([id, q]) => [id, q.loggedIn])));
+    // Activate tidsstyring and jobbprofil so the Mitt MBN toggle is ON immediately
+    setTidsstyringActive(true);
+    setEnabled(true);
     onClose();
   }
 

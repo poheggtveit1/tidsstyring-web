@@ -17,9 +17,10 @@ interface TopNavProps {
   onTabChange: (t: NavTab) => void;
   onLogout: () => void;
   onSimulate: () => void;
+  onSettings: () => void;
 }
 
-export function TopNav({ activeTab, onTabChange, onLogout, onSimulate }: TopNavProps) {
+export function TopNav({ activeTab, onTabChange, onLogout, onSimulate, onSettings }: TopNavProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -37,7 +38,7 @@ export function TopNav({ activeTab, onTabChange, onLogout, onSimulate }: TopNavP
         </button>
       </div>
 
-      {sidebarOpen && <NavSidebar onClose={() => setSidebarOpen(false)} onReset={onLogout} onSimulate={onSimulate} />}
+      {sidebarOpen && <NavSidebar onClose={() => setSidebarOpen(false)} onReset={onLogout} onSimulate={onSimulate} onSettings={onSettings} />}
 
       {/* Centre: segmented control */}
       <div className="flex items-center gap-1 rounded-full bg-ink-200 p-1">
