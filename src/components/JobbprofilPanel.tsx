@@ -8,17 +8,54 @@ import { QueueTable } from './QueueTable';
 import { TidsstyringDialog } from './TidsstyringDialog';
 import type { TimePeriod } from '../types/jobProfile';
 
-function getNextEventLabel(
-  isActive: boolean,
-  currentTimeTo: string,
+const NORWEGIAN_DAYS = ['Søndag', 'Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag'];
+
+function getNow(): string {
+  const d = new Date();
+  return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+}
+
+interface TidsstyringStatus {
+  inPeriod: boolean;
+  nowLabel: string;
+  nextLabel: string;
+}
+
+function computeTidsstyringStatus(
   periods: TimePeriod[],
-): string {
-  if (isActive) {
-    const backToBack = periods.some((p) => p.timeFrom === currentTimeTo);
-    return backToBack ? `Ny periode ${currentTimeTo}` : `Logges av ${currentTimeTo}`;
+  isActive: boolean,
+): TidsstyringStatus {
+  if (!isActive || periods.length === 0) {
+    return { inPeriod: false, nowLabel: '', nextLabel: '' };
   }
-  const sorted = [...periods].sort((a, b) => a.timeFrom.localeCompare(b.timeFrom));
-  return sorted.length > 0 ? `Logger på ${sorted[0].timeFrom}` : '';
+
+  const now = getNow();
+  const today = NORWEGIAN_DAYS[new Date().getDay()];
+
+  // Only consider periods that include today
+  const todayPeriods = periods
+    .filter((p) => p.days.includes(today))
+    .sort((a, b) => a.timeFrom.localeCompare(b.timeFrom));
+
+  // Are we inside a period right now?
+  const active = todayPeriods.find((p) => now >= p.timeFrom && now < p.timeTo);
+  if (active) {
+    const backToBack = todayPeriods.some((p) => p.timeFrom === active.timeTo);
+    return {
+      inPeriod: true,
+      nowLabel: `Logget på ${active.timeFrom}`,
+      nextLabel: backToBack ? `Ny periode ${active.timeTo}` : `Logges av ${active.timeTo}`,
+    };
+  }
+
+  // In a gap — find the next period starting later today
+  const next = todayPeriods.find((p) => p.timeFrom > now);
+  if (next) {
+    return { inPeriod: false, nowLabel: '', nextLabel: `Logger på ${next.timeFrom}` };
+  }
+
+  // No more periods today
+  return { inPeriod: false, nowLabel: '', nextLabel: '' };
 }
 
 interface Props {
@@ -32,12 +69,17 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
   const tidsstyringActive = useJobProfile((s) => s.tidsstyringActive);
   const setTidsstyringActive = useJobProfile((s) => s.setTidsstyringActive);
   const tidsstyringConfigured = useJobProfile((s) => s.tidsstyringConfigured);
-  const tidsstyringTimeFrom = useJobProfile((s) => s.tidsstyringTimeFrom);
-  const tidsstyringTimeTo = useJobProfile((s) => s.tidsstyringTimeTo);
   const timePeriods           = useJobProfile((s) => s.timePeriods);
   const finalizeWizardPeriod  = useJobProfile((s) => s.finalizeWizardPeriod);
 
-  const nextEventLabel = getNextEventLabel(tidsstyringActive, tidsstyringTimeTo, timePeriods);
+  // Recompute status every 30 s so the display stays in sync with the clock
+  const [, setTick] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setTick((t) => t + 1), 30_000);
+    return () => clearInterval(id);
+  }, []);
+
+  const { inPeriod, nowLabel, nextLabel } = computeTidsstyringStatus(timePeriods, tidsstyringActive);
 
   const externalOnly = useJobProfile((s) => s.externalOnly);
   const setExternalOnly = useJobProfile((s) => s.setExternalOnly);
@@ -167,19 +209,19 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
             />
           </div>
 
-          {/* Nå — only while inside an active period */}
-          {tidsstyringActive && (
+          {/* Nå — only while the clock is inside an active period */}
+          {inPeriod && (
             <div className="flex items-baseline gap-2 text-sm font-light">
               <span className="w-14 shrink-0 text-ink-500">Nå:</span>
-              <span className="text-ink-800">Logget på {tidsstyringTimeFrom}</span>
+              <span className="text-ink-800">{nowLabel}</span>
             </div>
           )}
 
-          {/* Neste — only when tidsstyring toggle is on */}
-          {tidsstyringActive && tidsstyringConfigured && nextEventLabel && (
+          {/* Neste — shown whenever toggle is on and there is an upcoming/ending event */}
+          {tidsstyringActive && nextLabel && (
             <div className="flex items-baseline gap-2 text-sm font-light">
               <span className="w-14 shrink-0 text-ink-500">Neste:</span>
-              <span className="text-ink-800">{nextEventLabel}</span>
+              <span className="text-ink-800">{nextLabel}</span>
             </div>
           )}
 
