@@ -21,24 +21,20 @@ export default function App() {
   const reset = useJobProfile((s) => s.reset);
   const setEnabled = useJobProfile((s) => s.setEnabled);
   const setQueuesActive = useJobProfile((s) => s.setQueuesActive);
-  const addTimePeriod = useJobProfile((s) => s.addTimePeriod);
   const setTidsstyringActive = useJobProfile((s) => s.setTidsstyringActive);
+  const setSelectedDisplayNumber = useJobProfile((s) => s.setSelectedDisplayNumber);
+  const timePeriods = useJobProfile((s) => s.timePeriods);
 
   function handleSimulate() {
-    addTimePeriod({
-      timeFrom: '10:00',
-      timeTo: '15:00',
-      days: ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag'],
-      displayNumberId: 'support',
-      externalOnly: true,
-      queueAssignments: {
-        kundeservice: { loggedIn: false, smsVarsling: false },
-        salg:         { loggedIn: true,  smsVarsling: true },  // Support
-        resepsjon:    { loggedIn: true,  smsVarsling: true },  // Verksted
-      },
-    });
+    const firstPeriod = timePeriods[0];
+    if (firstPeriod) {
+      const activeStates = Object.fromEntries(
+        Object.entries(firstPeriod.queueAssignments).map(([id, qs]) => [id, qs.loggedIn]),
+      );
+      setQueuesActive(activeStates);
+      setSelectedDisplayNumber(firstPeriod.displayNumberId);
+    }
     setEnabled(true);
-    setQueuesActive({ salg: true, resepsjon: true });
     setTidsstyringActive(true);
     setNavTab('sentralbord');
     setView('main');
