@@ -27,6 +27,16 @@ export default function App() {
   const setSelectedDisplayNumber = useJobProfile((s) => s.setSelectedDisplayNumber);
   const timePeriods = useJobProfile((s) => s.timePeriods);
   const finalizeWizardPeriod = useJobProfile((s) => s.finalizeWizardPeriod);
+  const tidsstyringConfigured = useJobProfile((s) => s.tidsstyringConfigured);
+
+  function handleOpenTidsstyring() {
+    if (tidsstyringConfigured) {
+      setNavTab('mitt-mbn');
+      setView('settings');
+    } else {
+      setShowTidsstyringWizard(true);
+    }
+  }
 
   function handleSimulate() {
     const firstPeriod = timePeriods[0];
@@ -89,13 +99,13 @@ export default function App() {
             xl:w-[460px]
           ">
             <IKoPanel />
-            <MineKoerPanel onOpenTidsstyring={() => setShowTidsstyringWizard(true)} />
+            <MineKoerPanel onOpenTidsstyring={handleOpenTidsstyring} />
           </aside>
 
           {/* Mobile: stacked */}
           <div className="flex flex-col gap-3 w-full md:hidden">
             <IKoPanel />
-            <MineKoerPanel onOpenTidsstyring={() => setShowTidsstyringWizard(true)} />
+            <MineKoerPanel onOpenTidsstyring={handleOpenTidsstyring} />
             <OtherCallsPanel />
             <CataloguePanel />
           </div>
