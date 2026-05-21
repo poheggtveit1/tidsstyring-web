@@ -1,10 +1,28 @@
-import { Headphones, MoreHorizontal } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { Clock, Headphones, MoreHorizontal } from 'lucide-react';
 import { useJobProfile } from '../store/jobProfileStore';
 import { Toggle } from './Toggle';
 
-export function MineKoerPanel() {
+interface Props {
+  onOpenTidsstyring?: () => void;
+}
+
+export function MineKoerPanel({ onOpenTidsstyring }: Props) {
   const queues            = useJobProfile((s) => s.queues);
   const toggleQueueActive = useJobProfile((s) => s.toggleQueueActive);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    function handleClick(e: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, [menuOpen]);
 
   return (
     <section className="flex flex-col overflow-hidden rounded-[var(--radius-card)] bg-surface shadow-[0_2px_8px_rgba(24,34,63,0.06)]">
@@ -15,13 +33,28 @@ export function MineKoerPanel() {
           <Headphones size={18} strokeWidth={1.5} className="text-ink-500" />
           <h2 className="text-base font-medium text-ink-800">Mine køer</h2>
         </div>
-        <button
-          type="button"
-          className="rounded-full p-1 text-brand-500 transition hover:bg-brand-50"
-          aria-label="Alternativer"
-        >
-          <MoreHorizontal size={18} strokeWidth={1.5} />
-        </button>
+        <div className="relative" ref={menuRef}>
+          <button
+            type="button"
+            className="rounded-full p-1 text-brand-500 transition hover:bg-brand-50"
+            aria-label="Alternativer"
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            <MoreHorizontal size={18} strokeWidth={1.5} />
+          </button>
+          {menuOpen && (
+            <div className="absolute right-0 top-full z-50 mt-1 w-44 overflow-hidden rounded-lg border border-ink-200 bg-surface shadow-md">
+              <button
+                type="button"
+                className="flex w-full items-center gap-2 px-3 py-2.5 text-sm text-ink-800 hover:bg-ink-100 transition-colors"
+                onClick={() => { setMenuOpen(false); onOpenTidsstyring?.(); }}
+              >
+                <Clock size={15} strokeWidth={1.5} className="text-ink-500" />
+                Tidsstyring
+              </button>
+            </div>
+          )}
+        </div>
       </header>
 
       {/* Body */}

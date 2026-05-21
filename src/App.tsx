@@ -10,6 +10,7 @@ import { SettingsPage } from './components/SettingsPage';
 import { IKoPanel } from './components/IKoPanel';
 import { MineKoerPanel } from './components/MineKoerPanel';
 import { TidsstyrtPaaloggingDialog } from './components/TidsstyrtPaaloggingDialog';
+import { TidsstyringDialog } from './components/TidsstyringDialog';
 
 type AppView = 'main' | 'settings';
 
@@ -18,12 +19,14 @@ export default function App() {
   const [rightCollapsed, setRightCollapsed] = useState(false);
   const [view, setView] = useState<AppView>('main');
   const [showSimulateDialog, setShowSimulateDialog] = useState(false);
+  const [showTidsstyringWizard, setShowTidsstyringWizard] = useState(false);
   const reset = useJobProfile((s) => s.reset);
   const setEnabled = useJobProfile((s) => s.setEnabled);
   const setQueuesActive = useJobProfile((s) => s.setQueuesActive);
   const setTidsstyringActive = useJobProfile((s) => s.setTidsstyringActive);
   const setSelectedDisplayNumber = useJobProfile((s) => s.setSelectedDisplayNumber);
   const timePeriods = useJobProfile((s) => s.timePeriods);
+  const finalizeWizardPeriod = useJobProfile((s) => s.finalizeWizardPeriod);
 
   function handleSimulate() {
     const firstPeriod = timePeriods[0];
@@ -60,6 +63,18 @@ export default function App() {
         />
       )}
 
+      {showTidsstyringWizard && (
+        <TidsstyringDialog
+          onClose={() => setShowTidsstyringWizard(false)}
+          onFinish={() => {
+            finalizeWizardPeriod();
+            setEnabled(true);
+            setTidsstyringActive(true);
+            setShowTidsstyringWizard(false);
+          }}
+        />
+      )}
+
       {view === 'settings' ? (
         <SettingsPage onBack={() => setView('main')} />
       ) : navTab === 'sentralbord' ? (
@@ -74,13 +89,13 @@ export default function App() {
             xl:w-[460px]
           ">
             <IKoPanel />
-            <MineKoerPanel />
+            <MineKoerPanel onOpenTidsstyring={() => setShowTidsstyringWizard(true)} />
           </aside>
 
           {/* Mobile: stacked */}
           <div className="flex flex-col gap-3 w-full md:hidden">
             <IKoPanel />
-            <MineKoerPanel />
+            <MineKoerPanel onOpenTidsstyring={() => setShowTidsstyringWizard(true)} />
             <OtherCallsPanel />
             <CataloguePanel />
           </div>
