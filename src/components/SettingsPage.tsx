@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { ChevronRight, Pencil, Trash2, Plus, Check } from 'lucide-react';
-import { Toggle } from './Toggle';
 import { useJobProfile } from '../store/jobProfileStore';
 import type { LoginMode, TimePeriod } from '../types/jobProfile';
 import { EndreTidsperiodeDialog } from './EndreTidsperiodeDialog';
@@ -61,10 +60,8 @@ export function SettingsPage({ onBack }: Props) {
   const timePeriods   = useJobProfile((s) => s.timePeriods);
   const displayNumbers = useJobProfile((s) => s.displayNumbers);
   const queues        = useJobProfile((s) => s.queues);
-  const loginMode          = useJobProfile((s) => s.loginMode);
-  const setLoginMode       = useJobProfile((s) => s.setLoginMode);
-  const tidsstyringActive  = useJobProfile((s) => s.tidsstyringActive);
-  const setTidsstyringActive = useJobProfile((s) => s.setTidsstyringActive);
+  const loginMode     = useJobProfile((s) => s.loginMode);
+  const setLoginMode  = useJobProfile((s) => s.setLoginMode);
   const [reminderChecked, setReminderChecked] = useState(true);
   const [editingPeriod, setEditingPeriod] = useState<TimePeriod | null>(null);
   const [deletingPeriodId, setDeletingPeriodId] = useState<string | null>(null);
@@ -115,15 +112,7 @@ export function SettingsPage({ onBack }: Props) {
 
             {/* Section header */}
             <div className="flex flex-col gap-1">
-              <div className="flex items-center justify-between">
-                <h2 className="text-xl font-medium text-ink-800">Tidsstyring</h2>
-                <Toggle
-                  on={tidsstyringActive}
-                  onChange={setTidsstyringActive}
-                  ariaLabel="Tidsstyring på/av"
-                  size="md"
-                />
-              </div>
+              <h2 className="text-xl font-medium text-ink-800">Tidsstyring</h2>
               <p className="text-sm font-light text-ink-600">
                 Administrer timeperioder for visningsnummer, og hvilke køer du ønsker å være pålogget.
               </p>
