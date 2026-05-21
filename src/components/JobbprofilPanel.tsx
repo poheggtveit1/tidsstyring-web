@@ -213,15 +213,9 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
         /* ── State 2 & 3: configured — toggle + optional Nå/Neste ── */
         <div className="flex flex-col gap-1.5 pl-6 pr-4 pt-3 pb-3">
 
-          {/* Toggle row */}
+          {/* Label row */}
           <div className="flex items-center gap-2">
             <span className="flex-1 text-base font-light text-ink-800">Tidsstyring</span>
-            <Toggle
-              on={tidsstyringActive}
-              onChange={setTidsstyringActive}
-              ariaLabel="Tidsstyring på/av"
-              size="md"
-            />
           </div>
 
           {/* Nå — only while the clock is inside an active period */}
