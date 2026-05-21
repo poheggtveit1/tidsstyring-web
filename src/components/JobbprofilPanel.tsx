@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { MoreVertical, ChevronRight } from 'lucide-react';
+import { MoreVertical, ChevronRight, Clock } from 'lucide-react';
 import { Toast } from './Toast';
 import { useJobProfile } from '../store/jobProfileStore';
 import { Toggle } from './Toggle';
@@ -164,6 +164,21 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
                 className="flex h-[49px] w-full items-center border-x border-[#7C88AB]/30 px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
               >
                 Anropsdistribusjon
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setMenuOpen(false);
+                  if (tidsstyringConfigured) {
+                    onNavigateToSettings?.();
+                  } else {
+                    setWizardOpen(true);
+                  }
+                }}
+                className="flex h-[49px] w-full items-center gap-2 border-x border-b border-[#7C88AB]/30 px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
+              >
+                <Clock size={16} strokeWidth={1.5} className="text-ink-500" />
+                Tidsstyring
               </button>
             </div>
           )}
