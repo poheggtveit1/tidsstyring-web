@@ -1,15 +1,49 @@
-import { ArrowDown, MoreHorizontal } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { ArrowDown, MoreHorizontal, MoreVertical, PhoneForwarded } from 'lucide-react';
 import { useJobProfile } from '../store/jobProfileStore';
 import { Toggle } from './Toggle';
 
 export function QueueTable() {
   const queues = useJobProfile((s) => s.queues);
   const toggle = useJobProfile((s) => s.toggleQueueActive);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    function handleClick(e: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) setMenuOpen(false);
+    }
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, [menuOpen]);
 
   return (
     <div className="flex flex-1 flex-col overflow-hidden pb-2">
-      <div className="px-4 pt-4 pb-2">
+      <div className="flex items-center justify-between px-4 pt-4 pb-2">
         <h3 className="text-base font-medium text-ink-600">Mine køer</h3>
+        <div className="relative" ref={menuRef}>
+          <button
+            type="button"
+            onClick={() => setMenuOpen((v) => !v)}
+            className="rounded-full p-1 text-brand-500 transition hover:bg-brand-50"
+            aria-label="Flere valg"
+          >
+            <MoreVertical size={18} strokeWidth={2} />
+          </button>
+          {menuOpen && (
+            <div className="absolute right-0 top-full z-50 mt-1 w-[220px] overflow-hidden rounded-[8px] bg-white shadow-[0_2px_8px_rgba(0,26,102,0.10),0_4px_16px_rgba(0,26,102,0.05)]">
+              <button
+                type="button"
+                onClick={() => setMenuOpen(false)}
+                className="flex h-[49px] w-full items-center gap-2 border-x border-[#7C88AB]/30 px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
+              >
+                <PhoneForwarded size={16} strokeWidth={1.5} className="text-ink-500" />
+                Anropsdistribusjon
+              </button>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Fills remaining height, scrolls if queues overflow */}

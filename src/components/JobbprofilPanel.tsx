@@ -1,62 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
-import { MoreVertical, ChevronRight, Clock } from 'lucide-react';
+import { MoreVertical, Clock } from 'lucide-react';
 import { Toast } from './Toast';
 import { useJobProfile } from '../store/jobProfileStore';
 import { Toggle } from './Toggle';
 import { DisplayNumberDropdown } from './DisplayNumberDropdown';
 import { QueueTable } from './QueueTable';
 import { TidsstyringDialog } from './TidsstyringDialog';
-import type { TimePeriod } from '../types/jobProfile';
-
-const NORWEGIAN_DAYS = ['Søndag', 'Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag'];
-
-function getNow(): string {
-  const d = new Date();
-  return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
-}
-
-interface TidsstyringStatus {
-  inPeriod: boolean;
-  nowLabel: string;
-  nextLabel: string;
-}
-
-function computeTidsstyringStatus(
-  periods: TimePeriod[],
-  isActive: boolean,
-): TidsstyringStatus {
-  if (!isActive || periods.length === 0) {
-    return { inPeriod: false, nowLabel: '', nextLabel: '' };
-  }
-
-  const now = getNow();
-  const today = NORWEGIAN_DAYS[new Date().getDay()];
-
-  // Only consider periods that include today
-  const todayPeriods = periods
-    .filter((p) => p.days.includes(today))
-    .sort((a, b) => a.timeFrom.localeCompare(b.timeFrom));
-
-  // Are we inside a period right now?
-  const active = todayPeriods.find((p) => now >= p.timeFrom && now < p.timeTo);
-  if (active) {
-    const backToBack = todayPeriods.some((p) => p.timeFrom === active.timeTo);
-    return {
-      inPeriod: true,
-      nowLabel: `Logget på ${active.timeFrom}`,
-      nextLabel: backToBack ? `Ny periode ${active.timeTo}` : `Logges av ${active.timeTo}`,
-    };
-  }
-
-  // In a gap — find the next period starting later today
-  const next = todayPeriods.find((p) => p.timeFrom > now);
-  if (next) {
-    return { inPeriod: false, nowLabel: '', nextLabel: `Logger på ${next.timeFrom}` };
-  }
-
-  // No more periods today
-  return { inPeriod: false, nowLabel: '', nextLabel: '' };
-}
+import { computeTidsstyringStatus, getUpcomingPeriod } from '../utils/tidsstyringStatus';
 
 interface Props {
   onNavigateToSettings?: () => void;
@@ -71,6 +21,10 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
   const tidsstyringConfigured = useJobProfile((s) => s.tidsstyringConfigured);
   const timePeriods           = useJobProfile((s) => s.timePeriods);
   const finalizeWizardPeriod  = useJobProfile((s) => s.finalizeWizardPeriod);
+  const setQueuesActive          = useJobProfile((s) => s.setQueuesActive);
+  const lastSessionQueueIds      = useJobProfile((s) => s.lastSessionQueueIds);
+  const queues                   = useJobProfile((s) => s.queues);
+  const setSelectedDisplayNumber = useJobProfile((s) => s.setSelectedDisplayNumber);
 
   // Recompute status every 30 s so the display stays in sync with the clock
   const [, setTick] = useState(0);
@@ -79,7 +33,8 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
     return () => clearInterval(id);
   }, []);
 
-  const { inPeriod, nowLabel, nextLabel } = computeTidsstyringStatus(timePeriods, tidsstyringActive);
+  const activeQueueIds = queues.filter((q) => q.active).map((q) => q.id);
+  const { prevLabel, nextLabel } = computeTidsstyringStatus(timePeriods, tidsstyringActive, activeQueueIds);
 
   const externalOnly = useJobProfile((s) => s.externalOnly);
   const setExternalOnly = useJobProfile((s) => s.setExternalOnly);
@@ -113,16 +68,24 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
 
   function handleEnabledChange(v: boolean) {
     setEnabled(v);
+    if (v && tidsstyringConfigured) {
+      const upcoming = getUpcomingPeriod(timePeriods);
+      if (upcoming) {
+        // < 60 min to next period — apply upcoming period queues + display number
+        setQueuesActive(
+          Object.fromEntries(
+            Object.entries(upcoming.queueAssignments).map(([id, qs]) => [id, qs.loggedIn])
+          )
+        );
+        setSelectedDisplayNumber(upcoming.displayNumberId);
+      } else if (lastSessionQueueIds.length > 0) {
+        // ≥ 60 min — restore last session queues
+        const states = Object.fromEntries(queues.map((q) => [q.id, lastSessionQueueIds.includes(q.id)]));
+        setQueuesActive(states);
+      }
+    }
   }
 
-  // Status dot + label in the header
-  // "Tidsstyrt:" prefix only when tidsstyring is active (in-period).
-  // When tidsstyring is configured but toggled off, falls back to manual Pålogget/Avlogget.
-  const tidsstyrtActive = tidsstyringConfigured && tidsstyringActive;
-  const statusLabel = tidsstyrtActive
-    ? (enabled ? 'Tidsstyrt: Pålogget' : 'Tidsstyrt: Avlogget')
-    : (enabled ? 'Pålogget' : 'Avlogget');
-  const statusGreen = enabled;
 
   return (
     <section
@@ -138,12 +101,7 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
             ariaLabel="Aktiver jobbprofil"
             size="md"
           />
-          <h2 className="text-xl font-medium text-ink-600">Jobbprofil</h2>
-          {/* Status dot + label */}
-          <div className="ml-1 flex items-center gap-1">
-            <div className={`h-2 w-2 rounded-full ${statusGreen ? 'bg-[#178222]' : 'bg-ink-600'}`} />
-            <span className="text-sm font-light text-ink-600">{statusLabel}</span>
-          </div>
+          <h2 className="text-xl font-medium text-ink-600">På jobb</h2>
         </div>
         <div ref={menuRef} className="relative">
           <button
@@ -160,13 +118,6 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
             <div className="absolute right-0 top-full z-50 mt-1 w-[293px] overflow-hidden rounded-[8px] bg-white shadow-[0_2px_8px_rgba(0,26,102,0.10),0_4px_16px_rgba(0,26,102,0.05),0_1px_3px_rgba(0,26,102,0.02)]">
               <button
                 type="button"
-                onClick={() => setMenuOpen(false)}
-                className="flex h-[49px] w-full items-center border-x border-[#7C88AB]/30 px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
-              >
-                Anropsdistribusjon
-              </button>
-              <button
-                type="button"
                 onClick={() => {
                   setMenuOpen(false);
                   if (tidsstyringConfigured) {
@@ -175,7 +126,7 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
                     setWizardOpen(true);
                   }
                 }}
-                className="flex h-[49px] w-full items-center gap-2 border-x border-b border-[#7C88AB]/30 px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
+                className="flex h-[49px] w-full items-center gap-2 border-x border-[#7C88AB]/30 px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
               >
                 <Clock size={16} strokeWidth={1.5} className="text-ink-500" />
                 Tidsstyring
@@ -211,44 +162,32 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
       ) : (
 
         /* ── State 2 & 3: configured — toggle + optional Nå/Neste ── */
-        <div className="flex flex-col gap-1.5 pl-6 pr-4 pt-3 pb-3">
+        <div className="flex flex-col gap-1.5 pl-14 pr-4 pt-3 pb-3">
 
-          {/* Toggle row */}
+          {/* Label row */}
           <div className="flex items-center gap-2">
-            <span className="flex-1 text-base font-light text-ink-800">Tidsstyring</span>
-            <Toggle
-              on={tidsstyringActive}
-              onChange={setTidsstyringActive}
-              ariaLabel="Tidsstyring på/av"
-              size="md"
-            />
+            <span className="flex-1 text-sm font-medium text-ink-800">Tidsstyring</span>
+            <div className="flex items-center gap-1">
+              <div className={`h-2 w-2 rounded-full ${tidsstyringActive ? 'bg-[#178222]' : 'bg-ink-400'}`} />
+              <span className="text-sm font-light text-ink-600">{tidsstyringActive ? 'På' : 'Av'}</span>
+            </div>
           </div>
 
-          {/* Nå — only while the clock is inside an active period */}
-          {inPeriod && (
-            <div className="flex items-baseline gap-2 text-sm font-light">
-              <span className="w-14 shrink-0 text-ink-500">Nå:</span>
-              <span className="text-ink-800">{nowLabel}</span>
+          {/* Gjeldende endring */}
+          {tidsstyringActive && prevLabel && (
+            <div className="flex items-baseline text-sm font-light">
+              <span className="shrink-0 text-ink-500">Gjeldende:</span>
+              <span className="flex-1 text-right text-ink-800">{prevLabel}</span>
             </div>
           )}
 
-          {/* Neste — shown whenever toggle is on and there is an upcoming/ending event */}
+          {/* Neste endring */}
           {tidsstyringActive && nextLabel && (
-            <div className="flex items-baseline gap-2 text-sm font-light">
-              <span className="w-14 shrink-0 text-ink-500">Neste:</span>
-              <span className="text-ink-800">{nextLabel}</span>
+            <div className="flex items-baseline text-sm font-light">
+              <span className="shrink-0 text-ink-500">Neste:</span>
+              <span className="flex-1 text-right text-ink-800">{nextLabel}</span>
             </div>
           )}
-
-          {/* State 2 & 3: Endre tidsstyring */}
-          <button
-            type="button"
-            onClick={() => onNavigateToSettings?.()}
-            className="mt-0.5 flex w-fit items-center gap-1 text-sm font-medium text-brand-500 transition hover:text-brand-600"
-          >
-            Endre tidsstyring
-            <ChevronRight size={13} strokeWidth={2} />
-          </button>
 
         </div>
       )}

@@ -1,15 +1,22 @@
 import { useEffect, useRef, useState } from 'react';
-import { Clock, Headphones, MoreHorizontal } from 'lucide-react';
+import { Clock, Headphones, MoreHorizontal, MoreVertical, PhoneForwarded } from 'lucide-react';
 import { useJobProfile } from '../store/jobProfileStore';
 import { Toggle } from './Toggle';
+import { computeTidsstyringStatus } from '../utils/tidsstyringStatus';
 
 interface Props {
   onOpenTidsstyring?: () => void;
 }
 
 export function MineKoerPanel({ onOpenTidsstyring }: Props) {
-  const queues            = useJobProfile((s) => s.queues);
-  const toggleQueueActive = useJobProfile((s) => s.toggleQueueActive);
+  const queues               = useJobProfile((s) => s.queues);
+  const toggleQueueActive    = useJobProfile((s) => s.toggleQueueActive);
+  const tidsstyringConfigured = useJobProfile((s) => s.tidsstyringConfigured);
+  const tidsstyringActive    = useJobProfile((s) => s.tidsstyringActive);
+  const timePeriods          = useJobProfile((s) => s.timePeriods);
+
+  const activeQueueIds = queues.filter((q) => q.active).map((q) => q.id);
+  const { prevLabel, nextLabel } = computeTidsstyringStatus(timePeriods, tidsstyringActive, activeQueueIds);
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -40,22 +47,55 @@ export function MineKoerPanel({ onOpenTidsstyring }: Props) {
             aria-label="Alternativer"
             onClick={() => setMenuOpen((v) => !v)}
           >
-            <MoreHorizontal size={18} strokeWidth={1.5} />
+            <MoreVertical size={18} strokeWidth={2} />
           </button>
           {menuOpen && (
-            <div className="absolute right-0 top-full z-50 mt-1 w-44 overflow-hidden rounded-lg border border-ink-200 bg-surface shadow-md">
+            <div className="absolute right-0 top-full z-50 mt-1 w-[220px] overflow-hidden rounded-[8px] bg-white shadow-[0_2px_8px_rgba(0,26,102,0.10),0_4px_16px_rgba(0,26,102,0.05)]">
               <button
                 type="button"
-                className="flex w-full items-center gap-2 px-3 py-2.5 text-sm text-ink-800 hover:bg-ink-100 transition-colors"
+                className="flex h-[49px] w-full items-center gap-2 border-x border-t border-[#7C88AB]/30 px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
+                onClick={() => setMenuOpen(false)}
+              >
+                <PhoneForwarded size={16} strokeWidth={1.5} className="text-ink-500" />
+                Anropsdistribusjon
+              </button>
+              <button
+                type="button"
+                className="flex h-[49px] w-full items-center gap-2 border-x border-t border-b border-[#7C88AB]/30 px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
                 onClick={() => { setMenuOpen(false); onOpenTidsstyring?.(); }}
               >
-                <Clock size={15} strokeWidth={1.5} className="text-ink-500" />
+                <Clock size={16} strokeWidth={1.5} className="text-ink-500" />
                 Tidsstyring
               </button>
             </div>
           )}
         </div>
       </header>
+
+      {/* Tidsstyring status */}
+      {tidsstyringConfigured && (
+        <div className="flex flex-col gap-1.5 pl-11 pr-4 pt-3 pb-1">
+          <div className="flex items-center gap-2">
+            <span className="flex-1 text-sm font-medium text-ink-800">Tidsstyring</span>
+            <div className="flex items-center gap-1">
+              <div className={`h-2 w-2 rounded-full ${tidsstyringActive ? 'bg-[#178222]' : 'bg-ink-400'}`} />
+              <span className="text-sm font-light text-ink-600">{tidsstyringActive ? 'På' : 'Av'}</span>
+            </div>
+          </div>
+          {tidsstyringActive && prevLabel && (
+            <div className="flex items-baseline text-sm font-light">
+              <span className="shrink-0 text-ink-500">Gjeldende:</span>
+              <span className="flex-1 text-right text-ink-800">{prevLabel}</span>
+            </div>
+          )}
+          {tidsstyringActive && nextLabel && (
+            <div className="flex items-baseline text-sm font-light">
+              <span className="shrink-0 text-ink-500">Neste:</span>
+              <span className="flex-1 text-right text-ink-800">{nextLabel}</span>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Body */}
       <div className="flex flex-col gap-2 px-4 py-3">
