@@ -1,0 +1,192 @@
+{
+  "themes": [
+    {
+      "id": "T1",
+      "name": "Tidsstyring forventes i Sentralbord, ikke Mitt MBN",
+      "severity": "Kritisk",
+      "frequency": 4,
+      "deltakere": [2, 3, 4, 5],
+      "summary": "4 av 5 deltakere lette etter Tidsstyring i Sentralbord-fanen og under Mine køer (særlig «...»-menyen). De fant det ikke før de fikk hint. Mental modell: når jeg jobber i Sentralbord, bør jeg konfigurere køpåloggingen mine derfra.",
+      "quotes": [
+        "Forstår ikke hvorfor Tidsstyring ligger i Mitt MBN og ikke Sentralbordet (D2)",
+        "Forventet ikke at oppsett skulle være via Mitt MBN (D3)",
+        "Finner naturlig nok ikke ut at hun må gå til Mitt MBN for å sette opp tidsstyring (D4)",
+        "Spør om han skal sette det opp på mitt mbn eller sentralbord (D5)"
+      ]
+    },
+    {
+      "id": "T2",
+      "name": "Mental modell: Tidsstyring per kø, ikke per tidsperiode",
+      "severity": "Kritisk",
+      "frequency": 4,
+      "deltakere": [2, 3, 4, 5],
+      "summary": "Brukerne tenker «hvilke tidsrom skal jeg svare på denne køen» — ikke «hvilke perioder skal jeg være på flere køer samtidig». Forventer å trykke på «...» ved enkeltkøer for å sette opp tider. D4 endte med tidsstyring per kø og misforsto også visningsnummer per kø.",
+      "quotes": [
+        "Ville aktivert direkte på kø, tenker det er logisk å trykke på mer-knapp for det (D2)",
+        "Sentralbord → Tenker det skulle vært under Mine køer (D3)",
+        "Hun tror at tidsstyringen er per kø. Forsøker også å sette visningsnummer per kø (D4)",
+        "Finner ikke knappen 'aktiver'. Ønsker å legge det pr kø (D5)"
+      ]
+    },
+    {
+      "id": "T3",
+      "name": "Jobbprofil-toggle blir oversett",
+      "severity": "Høy",
+      "frequency": 4,
+      "deltakere": [1, 2, 3, 4],
+      "summary": "Toggle for Jobbprofil ligger ved siden av Tidsstyring, men brukerne ser den ikke. De trodde at å skru av Tidsstyring også logget dem av. Statusen «Tidsstyrt pålogget» ble ikke umiddelbart koblet til Jobbprofilens av/på.",
+      "quotes": [
+        "Overser jobbprofil knappen.. Ide: Hjelpetekst på 'Jobbprofil'-knappen (D2)",
+        "Tror det er ingenting som skjer når han logger av jobbprofilen (men tidsperioden er aktiv) (D3)",
+        "Ser ikke 'Jobbprofil' knappen. Tror man logges av midlertididig ved å skru av 'Tidsstyringsknappen' (D4)",
+        "Litt usikker på hva 'Tidsstyrt pålogget' betyr (D1)"
+      ]
+    },
+    {
+      "id": "T4",
+      "name": "Overlappende perioder tillates (bug)",
+      "severity": "Kritisk (bug)",
+      "frequency": 3,
+      "deltakere": [3, 4, 5],
+      "summary": "Prototypen validerer ikke at to perioder ikke overlapper. Dette ledet brukere ut på feil spor — særlig D4 som satte opp én periode per kø med samme tidsrom, og D3 som bevisst la inn overlappende perioder for å se hva som skjedde.",
+      "quotes": [
+        "Feil i wizarden tillater overlappende tidsperioder, det skal ikke tillates (D3)",
+        "Får lagt inn overlappende perioder i prototypen. Får ikke testet logikken (D3)",
+        "Setter opp tidsstyring per kø, med overlappende tidsperioder (D4)",
+        "Blir litt forvirret av at mockup tillater overlappende perioder (D5)"
+      ]
+    },
+    {
+      "id": "T5",
+      "name": "Påminnelse vs. Automatisk — uklart hva som er hva",
+      "severity": "Høy",
+      "frequency": 3,
+      "deltakere": [1, 3, 4],
+      "summary": "Tekstene «Du logges på og av» (Automatisk) og «Logger på og av selv» (Påminnelse) blir blandet. D3 valgte Påminnelse, men trodde fortsatt at det skjedde automatisk. Brukere ønsker også påminnelse selv om de bruker automatisk pålogging.",
+      "quotes": [
+        "Forvirres av tre valg for automatisk, påminnelse og påminnelse om arbeidstid (D3)",
+        "Forvirrende med hva som er hva, spesielt 'Logger på og av selv' (D3)",
+        "Ønsker å ha påminnelse også ved automatisk pålogging (D3)",
+        "Velger Påminnelse... 'Han logger seg av og på av seg selv ja' — missforståelse her? (D3)"
+      ]
+    },
+    {
+      "id": "T6",
+      "name": "Per-dag/turnus støtte etterspørres",
+      "severity": "Høy",
+      "frequency": 3,
+      "deltakere": [2, 3, 5],
+      "summary": "Tidspersepective: brukerne tenker «mandag 8-16, tirsdag 16-21» — ikke ett ukentlig mønster. Wizarden støtter dette teknisk (én periode per dag), men det er ikke synlig — brukere tror de må sette opp én periode for hele uka.",
+      "quotes": [
+        "Stusser på at det kun er ukekalender. Savner kalender for turnusbruk (D2)",
+        "Si at jeg skal jobbe 8-16 på mandag, og 16-21 på tirsdag. Hva gjør jeg da? (D2)",
+        "Dager: Spør om det er mulig å tilpasse hver enkelt dag i wizard (D5)",
+        "Lurer på om han kan sette opp ulike tidsperioder per dag i onboarding (D5)"
+      ]
+    },
+    {
+      "id": "T7",
+      "name": "«Aktiver»-knappen er for diskret",
+      "severity": "Høy",
+      "frequency": 3,
+      "deltakere": [2, 4, 5],
+      "summary": "Aktiveringsknappen i Jobbprofil-panelet og i Innstillinger blir oversett. D4 leste «Aktivert» istedenfor «Aktiver». D5 navigerte rett til Mitt MBN men så ikke knappen. Visuell vekt + ikon kan hjelpe.",
+      "quotes": [
+        "Kanskje aktiver knappen er litt for subtil? Ikon? (D2)",
+        "Leser Aktivert, ikke Aktiver (D4)",
+        "Ser at det står tidsstyring men ikke Aktiver (D5)",
+        "Finner ikke knappen 'aktiver' (D5)"
+      ]
+    },
+    {
+      "id": "T8",
+      "name": "Begrepet «Tidsstyring» er ukjent",
+      "severity": "Medium",
+      "frequency": 3,
+      "deltakere": [2, 4, 5],
+      "summary": "Flere brukere koblet «Tidsstyring» til adminsystemet (TVM/åpningstider). D5 hadde ingen forhåndsmening om begrepet. Når konseptet ble forklart, så de behovet — men inngangen er bratt.",
+      "quotes": [
+        "Tidsstyring = Åpningstider (D2)",
+        "Tenker at 'Tidsstyring' er det vi har i adminløsningen (TVM) (D2)",
+        "Har ingen klar formening om hva tidsstyring er (D5)",
+        "Skjønner ikke helt hva begrepet 'tidsstyring' er (D5)"
+      ]
+    }
+  ],
+  "secondary_findings": [
+    {
+      "id": "S1",
+      "name": "Ønske om ad-hoc justering (forlenge dagen, hopp over én dag)",
+      "severity": "Medium",
+      "frequency": 3,
+      "deltakere": [1, 4, 5],
+      "summary": "Brukere vil enkelt forlenge en pågående dag eller skru av tidsstyringen midlertidig. D1 foreslår en «play»-knapp på «Neste»-raden. Inline-redigering på Mitt MBN-dashboardet etterspørres."
+    },
+    {
+      "id": "S2",
+      "name": "Klokkeslett mangler i påloggingsvarsel",
+      "severity": "Medium",
+      "frequency": 2,
+      "deltakere": [3],
+      "summary": "Varslingsdialogen for tidsstyrt pålogging mangler klokkeslett. D3 ønsker oppsummering av neste vakt: «pålogges 08:00, logges av 16:00»."
+    },
+    {
+      "id": "S3",
+      "name": "Synk mellom web og app",
+      "severity": "Medium",
+      "frequency": 2,
+      "deltakere": [1, 5],
+      "summary": "Brukere bekymrer seg for at endringer i web ikke umiddelbart reflekteres i app eller motsatt — særlig kritisk for tidsstyring som styrer hvem som er på køer."
+    },
+    {
+      "id": "S4",
+      "name": "Wizardvindu for lite ved mange køer",
+      "severity": "Lav",
+      "frequency": 1,
+      "deltakere": [1, 4],
+      "summary": "D1 og D4 må scrolle i Køer-steget når det er 3+ køer. Wizardens 640-720px fast høyde stenger ute siste linjen."
+    },
+    {
+      "id": "S5",
+      "name": "Status burde også vises i Sentralbord",
+      "severity": "Medium",
+      "frequency": 2,
+      "deltakere": [3, 4],
+      "summary": "Når brukeren først er i Sentralbord, ønsker hen å se status for tidsstyring der — ikke måtte bytte til Mitt MBN."
+    }
+  ],
+  "positives": [
+    {
+      "name": "Wizard-flyten oppleves intuitiv når den finnes",
+      "deltakere": [1, 4, 5],
+      "summary": "Når brukerne først er inne i wizarden, gikk det greit. D1 sa «det var jo ikke så vanskelig det». D4 «når hen først finner funksjon, går det helt fint». D5 «jeg slet jo ikke så mye med å skjønne det»."
+    },
+    {
+      "name": "Dag-velger (pills) er enkel og tydelig",
+      "deltakere": [1],
+      "summary": "D1: «Superintuitivt, å velge dager er enkelt»."
+    },
+    {
+      "name": "Plassering av Jobbprofil i Mitt MBN er OK når den først er funnet",
+      "deltakere": [3, 4],
+      "summary": "Når brukerne først har lært hvor det ligger, opplever de plasseringen som grei nok."
+    },
+    {
+      "name": "Status-tekst «Tidsstyrt: Pålogget» kobles raskt riktig av power users",
+      "deltakere": [1],
+      "summary": "D1 forstod intuitivt at «Tidsstyrt» indikerer at det ikke er hen selv som har gjort noe."
+    },
+    {
+      "name": "Behovet for tidsstyring blir tydelig etter forklaring",
+      "deltakere": [4, 5],
+      "summary": "Flere ser verdien når konseptet er forklart, selv om inngangen var bratt."
+    }
+  ],
+  "top_findings": [
+    "Tidsstyring må også være tilgjengelig fra Sentralbord (4/5 lette der først)",
+    "Brukere tenker per-kø, ikke per-tidsperiode (4/5 — gjør at mentalmodellen kolliderer med konseptet)",
+    "Jobbprofil-toggle er usynlig (4/5 — gir feil mentalmodell for hvordan av/på fungerer)",
+    "Overlappende perioder må valideres (kritisk bug — sender brukerne ut på feil spor)",
+    "Påminnelse vs. Automatisk må bli tydeligere (3/5 — feilvalg er sannsynlig i dag)"
+  ]
+}

@@ -1,0 +1,2872 @@
+{
+  "summary": {
+    "total": 316,
+    "unmapped": 0,
+    "totalStickiesScanned": 392,
+    "byParticipant": {
+      "1": 62,
+      "2": 52,
+      "3": 69,
+      "4": 77,
+      "5": 56
+    },
+    "byCategory": {
+      "negative": 70,
+      "idea": 31,
+      "neutral": 177,
+      "positive": 38
+    },
+    "byTask": {
+      "Bli kjent": 86,
+      "Oppgave 1": 173,
+      "Oppgave 2": 23,
+      "Posttest": 34
+    }
+  },
+  "data": [
+    {
+      "id": "32:55",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "negative",
+      "x": 4272,
+      "y": -774,
+      "text": "Blir noen ganger ufrivillig logget ut av Mitt MBN. Dette kan hende at skyldes interne forhold. \nSynes det bør komme bedre frem hvilken kø det er ringt via (ev.fargeforskjell på køene)."
+    },
+    {
+      "id": "39:66",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "negative",
+      "x": 5008,
+      "y": -374,
+      "text": "Timeout og utlogging → Telenor ID?"
+    },
+    {
+      "id": "39:80",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "idea",
+      "x": 5008,
+      "y": -134,
+      "text": "Få frem tydelig hvilken kø det gjelder (køanrop)"
+    },
+    {
+      "id": "39:90",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "idea",
+      "x": 4775,
+      "y": -134,
+      "text": "Ønske: Få svar på SMSer i Mitt MBN"
+    },
+    {
+      "id": "32:94",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 4508,
+      "y": -774,
+      "text": "Tidsstyring tolkes som automatisk av/på-logging. Mener det blir enklere å forholde seg til kø."
+    },
+    {
+      "id": "39:36",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 4775,
+      "y": -631,
+      "text": "Appen brukes mest, selv om hen sitter ved kontorpult (har tilgang til annen skjermstørrelse)\n\n60-70% på PC, resten på mobil ved reise/enklere tilgjengelig. Gjør akkurat det samme på PC og app"
+    },
+    {
+      "id": "39:73",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 4775,
+      "y": -374,
+      "text": "Medlem i 2 køer"
+    },
+    {
+      "id": "39:43",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 5008,
+      "y": -614,
+      "text": "Mitt MBN: Ringe, svare, søke, sende SMS, se kødetaljer, melde andre av/på køer"
+    },
+    {
+      "id": "34:36",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 4055,
+      "y": -183,
+      "text": "DSB, nødnett og administrering av det. Sitter i en radiogruppe, der de har kontakt med stortsett alle brukere av løsningen. Veldig avhengig av løsningen.    Bruker begge deler ganske mye. (sentralbord og mitt MBN)\n\nBrukt det siden 2023. \n\nBruker det veldig aktivt. Se hvem som er av og på, skrur på folk dersom de har glemt det, svarer, ringer sender SMS etc. Store deler av løsningen"
+    },
+    {
+      "id": "32:30",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 4048,
+      "y": -774,
+      "text": "Jobber i DSB, med admin av nødnett.\nHar kontakt med alle brukere i nødnett. Sentralbordløsningen er gull. Brukes 70% av tiden.\nSitter på kontor 8-16, på reise brukes MBN appen (men også på kontoret) 30% app bruk).\nHar brukt Mitt MBN  i ca 3 år.  Bruker Mitt MBN -ikke sentralbord. Svarer telefoner, finner telefonnummer, melde av/på kø, se hvem som er pålogget sende meldinger. Mitt MBN fungerer bra. Veldig fint å se hve som har besvart køanrop."
+    },
+    {
+      "id": "34:58",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "positive",
+      "x": 4290,
+      "y": -183,
+      "text": "Fungerer veldig bra på pc, lite bugs, ting fungerer som de skal.\n\nVeldig fint å se i loggen hvem som har svart hvem, dersom han har oppfølgingsspørsmål til dem internt."
+    },
+    {
+      "id": "36:60",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "idea",
+      "x": 5280,
+      "y": -591,
+      "text": "Ønsker tydeligere markering av hvilken kø det ringes inn på"
+    },
+    {
+      "id": "32:74",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "idea",
+      "x": 4272,
+      "y": -512,
+      "text": "Ønsker å se personlig SMS i webklienten (Mine Meldinger)."
+    },
+    {
+      "id": "36:77",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "idea",
+      "x": 5280,
+      "y": -351,
+      "text": "Ønsker “mine meldinger” også i Mitt MBN, dvs. at man også kan få inn personlige meldinger"
+    },
+    {
+      "id": "54:321",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "idea",
+      "x": 5280,
+      "y": -351,
+      "text": "Ønsker “mine meldinger” også i Mitt MBN, dvs. at man også kan få inn personlige meldinger"
+    },
+    {
+      "id": "36:92",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 5278,
+      "y": -831,
+      "text": "60-70 %  MBN på Web (resten på app)"
+    },
+    {
+      "id": "43:108",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 4290,
+      "y": 98,
+      "text": "Vinduet for wizard i prototypen er litt for lite når man har tre køer. Man må scrolle for å se siste linjen på oppsett av kø av/på-logging"
+    },
+    {
+      "id": "43:149",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 4779,
+      "y": 106,
+      "text": "Litt usikker på hva “Tidsstyrt pålogget” betyr. Tror det betyr at det er tidsstyringen som har logget han på køene. \nDet kan være riktig, men visningen skiller ikke på om det er han selv eller tidsstyringen som har logget på den enkelte kø"
+    },
+    {
+      "id": "43:244",
+      "participant": 1,
+      "task": "Bli kjent",
+      "category": "idea",
+      "x": 5014,
+      "y": 106,
+      "text": "Foreslår at tidsstyring kan endres ved å trykke på “Neste” informasjonen. \nMener dette vil gjøre det enklere å gjøre ad-hoc endringer på tidsstyring oppsettet.  F.eks. ved å ha en “play” knapp etter “Neste : “Logges av 15:00”"
+    },
+    {
+      "id": "36:123",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 5280,
+      "y": 1493,
+      "text": "leser intro"
+    },
+    {
+      "id": "36:140",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 5280,
+      "y": 1744,
+      "text": "forstår at han kan sette opp flere tidsperioder\nsynes det meste er intuitvt\nbra å få jobbprofil fra appen også i Mitt MBN\nsuperenkelt!\nGjenkjennelig fra slik det har vært tidligere"
+    },
+    {
+      "id": "32:144",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 4096,
+      "y": 1632,
+      "text": "Skjønner intuitivt hvor man setter opp tidsstyring i web-klienter."
+    },
+    {
+      "id": "32:162",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 4096,
+      "y": 1888,
+      "text": "Synes dett var lett å sette opp tidsstyring. Skjønner at man kan lage nye tidstyringer etter man har lagd den første."
+    },
+    {
+      "id": "39:115",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 4407,
+      "y": 2136,
+      "text": "Tidsstyring: Automatisk av-/pålogging og kan styre køer.  Enklere for de som ikke er så flink til å logge seg på. Mindre masing og påminnelser fra andre."
+    },
+    {
+      "id": "39:332",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 4880,
+      "y": 1884,
+      "text": "Lite akutte behov for overtid etc i statlig jobb. I tidl. jobb innen transport var det større behov for å gjøre adhoc-endringer"
+    },
+    {
+      "id": "39:159",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 4400,
+      "y": 2376,
+      "text": "Bytter visningsnummer til kønr. hvis det er behov. Vant til å primært bruke eget nummer"
+    },
+    {
+      "id": "39:169",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 4400,
+      "y": 2616,
+      "text": "Legger merke til tekst om at man logges ut etter perioden"
+    },
+    {
+      "id": "32:343",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 4183,
+      "y": 2848,
+      "text": "Er pålogget under lunsj, logger seg av under møter"
+    },
+    {
+      "id": "39:129",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 4640,
+      "y": 2128,
+      "text": "Når man kan få påminnelse, hvorfor ikke bare implementere at man kan gjøre det automatisk? Har tenkt over behovet tidl."
+    },
+    {
+      "id": "39:142",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 4640,
+      "y": 2368,
+      "text": "Superintuitivt, å velge dager er enkelt"
+    },
+    {
+      "id": "39:185",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 4640,
+      "y": 2616,
+      "text": "«Det var jo ikke så vanskelig det» etter å ha fullført wizard"
+    },
+    {
+      "id": "39:204",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 4880,
+      "y": 2616,
+      "text": "Fornøyd med at ting fungerer godt med Teams-sync i dag"
+    },
+    {
+      "id": "39:214",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 5120,
+      "y": 2616,
+      "text": "Vanskelig å peke på negative ting på sparket"
+    },
+    {
+      "id": "39:149",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 4880,
+      "y": 2368,
+      "text": "I første omgang kan jeg velge en, og legge til flere etter hvert. Det er jo kjekt"
+    },
+    {
+      "id": "39:244",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "idea",
+      "x": 4880,
+      "y": 2136,
+      "text": "Uoppf. kommentar: Gjøre kjappe endringer hvis man f.eks. skal jobbe overtid en dag. Adhoc endre tilgjengelighet"
+    },
+    {
+      "id": "39:342",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "idea",
+      "x": 5360,
+      "y": 2616,
+      "text": "Inline redigering av tidspunkt under Jobbprofil"
+    },
+    {
+      "id": "39:224",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 5120,
+      "y": 2368,
+      "text": "Status for jobbprofil er bra, tydelig at ting er på og aktivert"
+    },
+    {
+      "id": "39:234",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 4160,
+      "y": 2616,
+      "text": "Tidsstyrt Pålogget: Regner med det indikerer at det ikke er hen selv som har gjort noe"
+    },
+    {
+      "id": "34:155",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 4096,
+      "y": 2144,
+      "text": "Bra jobbprofilen har kommet inn i applikasjonen også"
+    },
+    {
+      "id": "34:178",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 4096,
+      "y": 2376,
+      "text": "Veldig bra å kunne lime inn nr og se hvem det er, samt historikk."
+    },
+    {
+      "id": "34:165",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 4400,
+      "y": 1884,
+      "text": "Veldig intuitiv veiledning, legger inn uten problemer, og tar seg god tid til å lese tekst"
+    },
+    {
+      "id": "32:196",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "idea",
+      "x": 4663,
+      "y": 1632,
+      "text": "Ønsker å gjøre kjappe endringer, dersom man én dag skal jobbe lengre (ad hock endring)"
+    },
+    {
+      "id": "36:196",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "idea",
+      "x": 5280,
+      "y": 2012,
+      "text": "Ønsker mulighet for å endre enkeltdager (dvs i dag) adhco. f.eks hvis man må jobbe litt lenger."
+    },
+    {
+      "id": "34:326",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 5360,
+      "y": 2368,
+      "text": "Endringsbart å endre tider i viewet. \n\nFort å glemme at han har skrudd av tidsstyring, dersom man bruker toggle på hovedsiden"
+    },
+    {
+      "id": "32:290",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 4096,
+      "y": 3424,
+      "text": "Ønsker ikke å varsles om at man logges på Kø.\n\nØnsker å kunne skru av varsling på web."
+    },
+    {
+      "id": "39:358",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 4688,
+      "y": 3641,
+      "text": "At ting bare starter uten varsling og mas"
+    },
+    {
+      "id": "39:365",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 4912,
+      "y": 3624,
+      "text": "Simulering av tidsstyrt pålogging: Tenker det er fint hvis man kunne skru av det. Hvis man setter opp tidsstyring så har man jo valgt det man vil skal skje. Trenger ikke påminnelse om at noe gjør det man har bedt om"
+    },
+    {
+      "id": "39:378",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 5152,
+      "y": 3664,
+      "text": "Logge av det man har bedt om. Trenger ikke varsel"
+    },
+    {
+      "id": "36:300",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 5152,
+      "y": 3207,
+      "text": "Ønsker ikke varsel, kun bli pålogget til riktig tid.\nØnsker å kunne skru av varsel dersom den default er på.\nVil slå av tidsstyring dersom han skal jobbe lenger en dag (og da er det fint at av/på er lett tilgjengelig)\nEr logget på i lunsjen\nLogger seg av manuelt i møter ved behov."
+    },
+    {
+      "id": "32:306",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "idea",
+      "x": 4096,
+      "y": 3664,
+      "text": "(Tanke DEK): Benytt en “Ikke vis igjen” på pop-up for varsling om køpålogging.."
+    },
+    {
+      "id": "34:361",
+      "participant": 1,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 4096,
+      "y": 3960,
+      "text": "2 ting som er bra:\nSette opp automatikk- det bare skjer uten av man trenger å tenke på det. Både av- og pålogging\n\nVeldig bra at man kan gjøre dette på dashboardet også."
+    },
+    {
+      "id": "34:383",
+      "participant": 1,
+      "task": "Oppgave 2",
+      "category": "negative",
+      "x": 4096,
+      "y": 4240,
+      "text": "2 ting som er mindre bra:\nVarslene. Skru dem av\n\nHvis man kan differensiere farger litt for å se hvilke anrop som gikk til hvilke køer."
+    },
+    {
+      "id": "39:398",
+      "participant": 1,
+      "task": "Oppgave 2",
+      "category": "positive",
+      "x": 4160,
+      "y": 4784,
+      "text": "Sette opp automatikk, at det bare skjer uten noe mer dilldall"
+    },
+    {
+      "id": "39:405",
+      "participant": 1,
+      "task": "Oppgave 2",
+      "category": "positive",
+      "x": 4432,
+      "y": 4784,
+      "text": "God balanse mellom jobb og fritid"
+    },
+    {
+      "id": "39:437",
+      "participant": 1,
+      "task": "Oppgave 2",
+      "category": "positive",
+      "x": 4432,
+      "y": 5056,
+      "text": "Wizard oppleves intuitivt"
+    },
+    {
+      "id": "39:489",
+      "participant": 1,
+      "task": "Oppgave 2",
+      "category": "positive",
+      "x": 4215,
+      "y": 5328,
+      "text": "Opplever ikke at Jobbprofil påvirker Mine køer. Plasseringen passer fint, er tilgjengelig. Tar litt plass, men ikke for mye"
+    },
+    {
+      "id": "39:412",
+      "participant": 1,
+      "task": "Oppgave 2",
+      "category": "positive",
+      "x": 4688,
+      "y": 4800,
+      "text": "Lett tilgjengelig hvis man må gjøre endringer. Kan skru av rett fra dashboard,"
+    },
+    {
+      "id": "39:422",
+      "participant": 1,
+      "task": "Oppgave 2",
+      "category": "idea",
+      "x": 4976,
+      "y": 4800,
+      "text": "Inline redigering  Evt. shortcuts ala varsling i app: Forlenge 1 time, forlenge 2 timer..."
+    },
+    {
+      "id": "39:450",
+      "participant": 1,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 4759,
+      "y": 5056,
+      "text": "Pålogget gjennom lunsj, tar telefonen uansett om man har brødskive i hånda"
+    },
+    {
+      "id": "39:464",
+      "participant": 1,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 4688,
+      "y": 5312,
+      "text": "Rom for katastrofe hvis det ikke er synkronisert mellom app og web"
+    },
+    {
+      "id": "39:471",
+      "participant": 1,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 4960,
+      "y": 5312,
+      "text": "Forventet at det skulle være sånn"
+    },
+    {
+      "id": "39:454",
+      "participant": 1,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 5024,
+      "y": 5056,
+      "text": "Prøver å huske avlogging under møter,"
+    },
+    {
+      "id": "54:334",
+      "participant": 2,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 7072,
+      "y": -560,
+      "text": "KS/feilfront - 11 år\nMest MBN Admin\nFår de fleste henvendelser via tlf men ikke via MBN\nTidsstyring: Styring av samtaler innenfor et tidsrom"
+    },
+    {
+      "id": "56:330",
+      "participant": 2,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 6227,
+      "y": -624,
+      "text": "Kundeservice i 11 år, feilfront"
+    },
+    {
+      "id": "59:339",
+      "participant": 2,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 5984,
+      "y": -384,
+      "text": "Jobber med å gjøre endringer for kunde i MBN Admin.\n\nHar eget system for kundehenvendelser.\n\nTidsstyring = Åpningstider"
+    },
+    {
+      "id": "56:340",
+      "participant": 2,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 6470,
+      "y": -624,
+      "text": "Sentralbord for veil., bruker det ikke selv utover det"
+    },
+    {
+      "id": "56:347",
+      "participant": 2,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 6712,
+      "y": -624,
+      "text": "Bruker MBN Admin mest; endre oppsett.\n\nSjeldent spm om Sentralbord → innlogging Telenor ID"
+    },
+    {
+      "id": "56:360",
+      "participant": 2,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 6226,
+      "y": -384,
+      "text": "Tidsstyring handler om åpningstider og styring av samtaler innenfor et gitt tidsrom. Spesialdager osv."
+    },
+    {
+      "id": "60:435",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6245,
+      "y": 2946,
+      "text": "Finner ikke ut at man bruker “Legg til tidsperiode” for å lage ny tidsperiode. Trenger litt hint før han finner ut av det."
+    },
+    {
+      "id": "54:409",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6985,
+      "y": 2526,
+      "text": "Stusser på at det kun er kun ukekalender\nSavner kalender for turnusbruk\nTenker at dette burde vært satt opp av en adiministrator"
+    },
+    {
+      "id": "54:434",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6984,
+      "y": 3392,
+      "text": "Synes det er vanskelig å sette opp forskjellige arbeidstider per dag. Ønsker å sette opp dette i onboarding"
+    },
+    {
+      "id": "54:447",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6984,
+      "y": 3616,
+      "text": "Ser ikke legg til tidsperiode umiddelbart. Går inn på endre tidsperiode først. Men finner ut av det etterhvert"
+    },
+    {
+      "id": "70:493",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6727,
+      "y": 3658,
+      "text": "SEr ikke toggle-bryter for å slå av og på jobbprofil (har ingen hjelpetekst)"
+    },
+    {
+      "id": "56:474",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6964,
+      "y": 3168,
+      "text": "Tungvint hvis man jobber noe annet enn 8-16"
+    },
+    {
+      "id": "57:438",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6727,
+      "y": 3416,
+      "text": "Ser ikke “+legg til tidsperiode” med en gang. \nFinner den etter ett lite hint."
+    },
+    {
+      "id": "62:543",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6469,
+      "y": 3413,
+      "text": "Merkelig om arbeidstaker skal gjøre det selv"
+    },
+    {
+      "id": "62:563",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6242,
+      "y": 3414,
+      "text": "Veldig vant til Telenor-systemet hvor man blir målt og styrt på alt. Rart å se for seg at man skulle hatt ansvar for å sette opp sin egen arbeidsdag.   Farget av å bruke egne systemer i sin arbeidshverdag. Er ikke bruker av MBN-løsningene, så har ikke direkte erfaring utover å veilede."
+    },
+    {
+      "id": "60:404",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6242,
+      "y": 2671,
+      "text": "Oppsettet passer ikke for de som jobber turnus. Tenker at det ikke er hans jobb å sette opp tidsstyringen, men en admin oppgave. Dette vil koste tid og penger om den enkelte skal styre tidsstyringen."
+    },
+    {
+      "id": "54:387",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6987,
+      "y": 2213,
+      "text": "Forstår ikke hvorfor Tidsstyring ligger i Mitt MBN og ikke Sentralbordet når han jobber i Sentralbordet\nSer ikke Tidsstyrings-valget under Jobbprofil.!!!\nLeiter etter valget “Arbeidsdag” el. l\nFinner valget etter veldig mange hint."
+    },
+    {
+      "id": "60:366",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6736,
+      "y": 2192,
+      "text": "Finner ikke ut at tidsstyringen settes opp i MItt MBN."
+    },
+    {
+      "id": "56:380",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 6243,
+      "y": 1904,
+      "text": "Tenker pålogging skjer via Mine køer"
+    },
+    {
+      "id": "56:387",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 6485,
+      "y": 1904,
+      "text": "Ville aktivert direkte på kø, tenker det er logisk å trykke på mer-knapp for det."
+    },
+    {
+      "id": "56:404",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 6243,
+      "y": 2192,
+      "text": "Ikke logisk eller intuitivt å aktivere tidsstyring når det ikke nevnes i det hele tatt i Sentralbord"
+    },
+    {
+      "id": "56:451",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 6727,
+      "y": 2690,
+      "text": "Kun Tidsstyring som begrep er kanskje ikke så intuitivt hvis bruker ikke er kjent med det. Hjelpe med å koble det opp mot arbeidstid, etc.?"
+    },
+    {
+      "id": "56:467",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 6727,
+      "y": 2932,
+      "text": "Tenker det burde vært en annens jobb å sette opp. Ressursstyrer eller en admin?"
+    },
+    {
+      "id": "56:491",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6485,
+      "y": 2941,
+      "text": "Hvis man må sette opp en og en dag blir det veldig tidkrevende.   Hvis man jobber ulike tidspunkt hver dag"
+    },
+    {
+      "id": "56:484",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 6727,
+      "y": 3174,
+      "text": "Skal sluttbruker selv gjøre dette, så blir det fort åpent for slurv og feil"
+    },
+    {
+      "id": "56:520",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 6015,
+      "y": 3177,
+      "text": "Aldri fått noe spm om behov om dette fra kunder. Er det faktisk etterspurt, eller er det noe man bare vil tilby?"
+    },
+    {
+      "id": "62:550",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 6015,
+      "y": 3409,
+      "text": "Får forklart konsept og behov. Skjønner det kan være praktisk for mindre bedrifter. Så selv for seg at det gjaldt store bedrifter, som Telenor selv, hvor en admin da burde hatt ansvaret"
+    },
+    {
+      "id": "56:527",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 6242,
+      "y": 3177,
+      "text": "For seg selv som arbeidstaker: En jobb man må gjøre hver uke hvis man har varierende arbeidstid. Mer naturlig om behovet var for administrator"
+    },
+    {
+      "id": "57:404",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 6987,
+      "y": 2773,
+      "text": "Mange som jobber turnus. Må muligens inn hver uke for å gjøre denne jobben da?\n\n“Skulle jeg ha gjort dette i Telenor, så hadde jeg tenkt at det er en annen sin oppgave å sette inn.”\n\n“si at jeg skal jobbe 8-16 på mandag, og 16-21 på tirsdag. Hva gjør jeg da?”"
+    },
+    {
+      "id": "60:385",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 6243,
+      "y": 2441,
+      "text": "Bruker foretrekker å klikke på “...” for å gjøre tidsstyring.\n\nTenker at “Tidsstyring” er det vi har i adminløsningen (TVM)"
+    },
+    {
+      "id": "56:444",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6727,
+      "y": 2432,
+      "text": "Tenker det er mest logisk å aktivere via hver enkelt kø, ser ikke Aktiver-knapp"
+    },
+    {
+      "id": "56:411",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6485,
+      "y": 2192,
+      "text": "Hvorfor ligger alt på Mitt MBN? ALle har jo tilgang til det"
+    },
+    {
+      "id": "56:427",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6485,
+      "y": 2432,
+      "text": "Må lære seg at det er på ulike steder"
+    },
+    {
+      "id": "56:434",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 6485,
+      "y": 2690,
+      "text": "Luft i Sentralbord. Blir feil om det blir for mye"
+    },
+    {
+      "id": "56:501",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 6482,
+      "y": 3172,
+      "text": "Bra at man kan velge aktiveringstype. Kan jo skje ting i livet som gjør at man ikke er klar når man skal være det"
+    },
+    {
+      "id": "56:394",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 6728,
+      "y": 1904,
+      "text": "Har en egen tanke om konseptet Tidsstyring, og blir nølende i svar når Tidsstyring i denne konteksten er annerledes"
+    },
+    {
+      "id": "57:358",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 6000,
+      "y": 2192,
+      "text": "Kommer inn på Sentralbord når man logger inn, står ingenting om tidsstyring der inne- noe som burde vurderes/snakkes om?\n\nTrykker på de tre prikkene som er på mine køer under sentralbord.\n\nVeileder testperson på mitt MBN. \n\n“hva er grunnen til at dette ligger under mitt MBN og ikke sentralbord?”.\n\nØnsker fortsatt å trykke på de 3 prikkene ved køene.\n\nTolker det som at han kanskje ønsker en mulighet for å legge tidsstyring pr kø?\n\n“for hva vi snakker om er jo hvilke tidsrom jeg skal svare på køene”.\n\nKanskje aktiver knappen er litt for subtil? Ikon?"
+    },
+    {
+      "id": "54:359",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 6971,
+      "y": 1904,
+      "text": "har tilgang men bruker kun for å løse kundecase\nGår ikke til Mitt MBN for å finne tidsstyring\nLeter etter tidsstyring i sentralbordet\n(Veldig vanskelig inngang til testen her...)\nHva er grunnen til at alt ligger i Mitt MBN?"
+    },
+    {
+      "id": "56:367",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 6000,
+      "y": 1904,
+      "text": "Ingen formell opplæring i Sentralbord. Selvlært fra kundecaser. Har tilgang via eget mobilnr."
+    },
+    {
+      "id": "68:485",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6727,
+      "y": 3898,
+      "text": "Usikker på hva toggle faktisk betyr og gjør til tidsstyring. Da man fortsatt blir pålogget(jobbprofil).\n\nOverså jobbprofil toggle totalt, da han så mye på tidsstyringen"
+    },
+    {
+      "id": "69:484",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6469,
+      "y": 3647,
+      "text": "Overser jobbprofil knappen..\n\nIde: Hjelpetekst på “Jobbprofil”-knappen."
+    },
+    {
+      "id": "86:579",
+      "participant": 3,
+      "task": "Bli kjent",
+      "category": "negative",
+      "x": 8112,
+      "y": -864,
+      "text": "Overser jobbprofil knappen..\n\nIde: Hjelpetekst på “Jobbprofil”-knappen."
+    },
+    {
+      "id": "63:466",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 6985,
+      "y": 3848,
+      "text": "Mindre skjerm- køene blir borte. Hvor han må bla i en veldig liten vertikal scroll! for å se køene sine.\n\nMuligens veldig viktig å tenke på??"
+    },
+    {
+      "id": "67:603",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 7245,
+      "y": 2715,
+      "text": "Forvirrende om man må inn på to steder: At hvis man jobber i Sentralbord så er det der man skal holde på, ikke veksle mellom"
+    },
+    {
+      "id": "62:582",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 7229,
+      "y": 2203,
+      "text": "Lurer på hva hensikten med å toggle av tidsstyring er? Hvis man skal jobbe lenger, så tenker hen at man da skal skru av der"
+    },
+    {
+      "id": "62:589",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 7229,
+      "y": 2459,
+      "text": "Tenker de fleste kommer til å bruke appen"
+    },
+    {
+      "id": "67:619",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 7252,
+      "y": 2992,
+      "text": "Dra tidlig fra jobb → toggle av tidsstyring men ser hen fortsatt er pålogget. Oppdager toggle for Jobbprofil etter hvert. Overså den fordi fokuset var på tidsstyring og toggle ikke ligger i umiddelbar nærhet"
+    },
+    {
+      "id": "62:596",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 7245,
+      "y": 3248,
+      "text": "“Det skal bare funke”, synser litt rundt hvilke kunder de har, og at de fleste bruker app, er semi-teknisk anlagt og trenger at ting er intuitivt og enkelt"
+    },
+    {
+      "id": "67:629",
+      "participant": 2,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 7241,
+      "y": 3504,
+      "text": "Mange valg, og det er begrenset hvor enkelt man kan gjøre ting."
+    },
+    {
+      "id": "67:642",
+      "participant": 2,
+      "task": "Posttest",
+      "category": "negative",
+      "x": 6048,
+      "y": 5952,
+      "text": "Endre: Forvirrende med flere perioder"
+    },
+    {
+      "id": "67:652",
+      "participant": 2,
+      "task": "Posttest",
+      "category": "negative",
+      "x": 6325,
+      "y": 5952,
+      "text": "Ordlyd steg 1 i wizard: Forvirrende, tenker det ikke er så tydelig at man legger til 1 først?"
+    },
+    {
+      "id": "67:677",
+      "participant": 2,
+      "task": "Posttest",
+      "category": "negative",
+      "x": 6325,
+      "y": 6224,
+      "text": "Får beskjed i wizard at man kan legge til flere under Innstillinger, leter da etter det uten å finne"
+    },
+    {
+      "id": "67:659",
+      "participant": 2,
+      "task": "Posttest",
+      "category": "idea",
+      "x": 6603,
+      "y": 5952,
+      "text": "“Legg til flere under Endre tidsstyring”"
+    },
+    {
+      "id": "86:629",
+      "participant": 3,
+      "task": "Bli kjent",
+      "category": "negative",
+      "x": 8373,
+      "y": -656,
+      "text": "Finner ikke Tidsstyring i Sentralbord GUI. Finner det ikke under Mitt MBN GUI. Men finner det under innstillinger til Mitt MBN,"
+    },
+    {
+      "id": "85:591",
+      "participant": 3,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 8800,
+      "y": -640,
+      "text": "MBN 3. linje, helt fersk. Tidligere på 2. linje"
+    },
+    {
+      "id": "85:608",
+      "participant": 3,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 8800,
+      "y": -393,
+      "text": "Bruker Sentralbord ifbm. feilsøking og feilretting"
+    },
+    {
+      "id": "85:616",
+      "participant": 3,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 9040,
+      "y": -393,
+      "text": "Opplever at tidsstyring har vært et tema, og vet at kunder har hatt ønske om det"
+    },
+    {
+      "id": "85:598",
+      "participant": 3,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 9040,
+      "y": -640,
+      "text": "Kjenner til Sentralbord godt"
+    },
+    {
+      "id": "86:586",
+      "participant": 3,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 7888,
+      "y": -656,
+      "text": "Jobber i 3. linje hos Christian M.  Har jobbet mer enn 20 år med sentralbord. Flere henvendelser fra kunder som ønsker tidsstyring."
+    },
+    {
+      "id": "88:594",
+      "participant": 3,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 8130,
+      "y": -656,
+      "text": "Har jobbet i 2.linje kundeservice i flere år med MBN og skytjenester, og er nå i 3.linje drift for MBN og skytjenester. Har lang erfaring (20 år) med denne type tjenester"
+    },
+    {
+      "id": "88:614",
+      "participant": 3,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 8130,
+      "y": -423,
+      "text": "Mangler tidspunkt i varselet som gis i gui om at tidsstyringen har logget deg av/på. Bør angi tidspunkt i infovinduet."
+    },
+    {
+      "id": "88:634",
+      "participant": 3,
+      "task": "Bli kjent",
+      "category": "idea",
+      "x": 8616,
+      "y": -656,
+      "text": "Legge valg for tidsstyring  i ‘Mine køer’ seksjonen i sentralbord, slik at man har to valg der ;\nAnropsdistribusjon\nTidsstyring"
+    },
+    {
+      "id": "88:660",
+      "participant": 3,
+      "task": "Bli kjent",
+      "category": "negative",
+      "x": 8373,
+      "y": -423,
+      "text": "Finner ikke tidsstyringen i Mitt MBN, men finner det til slutt under innstillinger, og går seg litt fast der. Burde kanskje “tvinge” brukerne gjenniom wizarden ved første gangs oppsett?"
+    },
+    {
+      "id": "88:677",
+      "participant": 3,
+      "task": "Bli kjent",
+      "category": "negative",
+      "x": 8373,
+      "y": -176,
+      "text": "Ønsker å ha påminnelse også ved automatisk pålogging, men skjønner ikke at det går slik prototypen presenterer det i dag."
+    },
+    {
+      "id": "88:745",
+      "participant": 3,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 8130,
+      "y": -176,
+      "text": "Overskriftene i wizarden for Visningsnummer,  og køer kunne være gjort tydligere. Han så ikke visningsnummer de første gangene"
+    },
+    {
+      "id": "88:762",
+      "participant": 3,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 8130,
+      "y": 57,
+      "text": "Feil i wizarden tillater overlappende tidsperioder, det er skal ikke tillates"
+    },
+    {
+      "id": "88:839",
+      "participant": 3,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 8130,
+      "y": 304,
+      "text": "Tekstendring på påminnelse, få med ordet “manuelt” i teksten for påminnelse. \nKanskje løfte teksten for påminnelse ved automatisk pålogging til punktet for automatisk pålogging? Det kommer nederst på siden nå og brukeren skjønner ikke at teksten gjelder for automatisk pålogging"
+    },
+    {
+      "id": "85:686",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 8784,
+      "y": 2160,
+      "text": "Forvirres av tre valg for automatisk, påminnelse og påminnelse om arbeidstid: Feil med prototype"
+    },
+    {
+      "id": "89:739",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 8128,
+      "y": 2992,
+      "text": "Det burde være likt på mitt MBN og sentralbord."
+    },
+    {
+      "id": "89:798",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 7888,
+      "y": 3840,
+      "text": "NB: får lagt inn overlappende perioder i prototypen. Får ikke testet logikken som skal ligge bak dette?"
+    },
+    {
+      "id": "89:777",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 8507,
+      "y": 3552,
+      "text": "Ser ikke oppsummering på tidsperioden at det er lagt inn visningsnummer."
+    },
+    {
+      "id": "85:832",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 8784,
+      "y": 3458,
+      "text": "Forventet ikke at oppsett skulle være via Mitt MBN"
+    },
+    {
+      "id": "85:773",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "idea",
+      "x": 8784,
+      "y": 3209,
+      "text": "Sentralbord: Mener det burde vært synlig at man er pålogget der også  Ville hatt en indikasjon knyttet til Mine køer. Burde vært likt på begge"
+    },
+    {
+      "id": "85:825",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "idea",
+      "x": 8784,
+      "y": 3695,
+      "text": "Anropsdistribusjon, forventet at visningsnummer skulle ligget der?"
+    },
+    {
+      "id": "85:693",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 9059,
+      "y": 2160,
+      "text": "Forvirrende med hva som er hva, spesielt “Logger på og av selv”"
+    },
+    {
+      "id": "86:814",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "idea",
+      "x": 7930,
+      "y": 2512,
+      "text": "Burde vise valget “Tidsstyring” under Innstillinger på sentralbordet også (kommer til samme side som i Mitt MBN)"
+    },
+    {
+      "id": "89:727",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "idea",
+      "x": 8128,
+      "y": 2736,
+      "text": "Slå av og på tidsstyring inne i innstillinger? Kun mulig fra mitt mbn i prototypen."
+    },
+    {
+      "id": "89:764",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "idea",
+      "x": 8128,
+      "y": 3248,
+      "text": "Dialog/påminnelse: burde denne si noe om klokkeslett når den logger på, og ikke bare “du blir snart pålogget”? Kanskje en oppsummering for følgende “vakt”. pålogging og avlogging"
+    },
+    {
+      "id": "89:616",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 7904,
+      "y": 2224,
+      "text": "Søker seg de tre prikkene under mine køer (likt som BT2)."
+    },
+    {
+      "id": "89:632",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 8147,
+      "y": 2224,
+      "text": "“Mitt MBN styrer vel ikke køer?” Går via innstillinger for å finne frem. Hopper over Wissard nå som den ikke er her. Velger påminnelse- “syns det er greit at når kl nærmer seg 8, så får jeg en beskjed om at det begynner å skje noe”."
+    },
+    {
+      "id": "89:651",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 8389,
+      "y": 2224,
+      "text": "“Han logger seg av og på av seg selv ja” → under påminnelse- missforståelse her?\n\n“muligens forvirrende hva som er hva her”\n\n-Skrevet feil i prototypen.\n\n“manuell øvelse det her da”\n\n“Ønsker varsel på automatisk og jeg da”.\n\n-prototypen lugger litt her."
+    },
+    {
+      "id": "85:626",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 7904,
+      "y": 1888,
+      "text": "Sentralbord → Tenker det skulle vært under Mine køer. Sjekker Meny og hadde lyst til å trykke på Innstillinger. Finner det ikke der hen tenker det hadde vært naturlig i Sentralbord"
+    },
+    {
+      "id": "85:639",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 8146,
+      "y": 1888,
+      "text": "Veiledes til Mitt MBN. Går først på Meny, så ned til Jobbprofil uten å finne aktivering. FInner det via Innstillinger"
+    },
+    {
+      "id": "85:649",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 8388,
+      "y": 1888,
+      "text": "Aktivering via Innstillinger. Ikke nødvendigvis feil, men går ikke gjennom wizard, og havner i en dead end uten bekreftelse på aktivering"
+    },
+    {
+      "id": "85:662",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 8630,
+      "y": 1888,
+      "text": "Velger Påminnelse, ikke automatisk"
+    },
+    {
+      "id": "85:679",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 8872,
+      "y": 1888,
+      "text": "Relevant å få en påminnelse, få bekreftelse på at noen andre har logget seg på"
+    },
+    {
+      "id": "85:716",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 8784,
+      "y": 2441,
+      "text": "Jobber ikke kveldsskift"
+    },
+    {
+      "id": "89:694",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 8389,
+      "y": 2992,
+      "text": "Utydelig i prototypen hvordan han får seg tilbake til MBN. -litt knot fra innstillinger til MBN"
+    },
+    {
+      "id": "85:723",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 8784,
+      "y": 2678,
+      "text": "Spm. om oppsettet passer hen: Burde hatt en påminnelse om pålogging, spesielt hvis det er en kort økt midt på dagen"
+    },
+    {
+      "id": "85:740",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 8389,
+      "y": 2736,
+      "text": "Går inn på Innstillinger igjen for å sjekke hvordan statuser ser ut hvis man ikke er pålogget enda"
+    },
+    {
+      "id": "85:747",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 8784,
+      "y": 2915,
+      "text": "Observatør-spm.: Autolagring under innstillinger? Navigerer tilbake til startside via splitbutton. Leter ikke etter lagring, kun observasjon siden det er manuell lagring i app"
+    },
+    {
+      "id": "85:760",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 9024,
+      "y": 2928,
+      "text": "Status knyttet til Jobbprofil: Er det Jobbprofil som viser status her? Ville trodd den var rød for å indikere at man ikke er logget på enda"
+    },
+    {
+      "id": "85:786",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 9040,
+      "y": 3209,
+      "text": "«Hvis det skal være begge steder, burde det være likt»"
+    },
+    {
+      "id": "85:801",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 9040,
+      "y": 3446,
+      "text": "Hvis man skal behandle på- og avlogging er det ikke Mitt MBN som er naturlig å sette det opp?"
+    },
+    {
+      "id": "85:808",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 9040,
+      "y": 3683,
+      "text": "Feilmeldinger hen behandler er oftest knyttet til Sentralbord. Langt færre henvendelser om Mitt MBN"
+    },
+    {
+      "id": "85:863",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 8229,
+      "y": 3552,
+      "text": "Burde det vært mulig å ha overlappende perioder? Tenker det går siden periode 2 kun har visningsnummer."
+    },
+    {
+      "id": "89:848",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 7888,
+      "y": 2992,
+      "text": "Tror det er ingenting som skjer når han logger av jobbprofilen (men tidsperioden er aktiv).\n\nMulig forvirring her"
+    },
+    {
+      "id": "89:838",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 8464,
+      "y": 3840,
+      "text": "Tenker det er mange kunder som kun ønsker å tidsstyre visningsnummer og ikke inkl på og avlogging?"
+    },
+    {
+      "id": "85:882",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 7936,
+      "y": 3520,
+      "text": "Tester å kun tidsstyre visningsnummer. Tenker det er en del kunder som vil det"
+    },
+    {
+      "id": "85:892",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 7888,
+      "y": 3241,
+      "text": "Usikker på hva som skjer når Jobbprofil skrus av mens tidsstyring viser hendelse kl 11:00  Tror ingenting skjer når jobbprofil er av mens tidsstyring er på"
+    },
+    {
+      "id": "85:815",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 8507,
+      "y": 3241,
+      "text": "«Var det tidsstyring på visningsnummer også?» Fikk ikke det med seg tidligere siden hen ikke var innom wizard?\n\nVeil. til å legge til ny tidsperiode for å teste"
+    },
+    {
+      "id": "89:811",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 8172,
+      "y": 3840,
+      "text": "“Dette blir forvirrende”: Når han har lagt til overlappende tidsperioder med samme kø og ulike visningsnummre"
+    },
+    {
+      "id": "85:733",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 9059,
+      "y": 2678,
+      "text": "Legger merke til status under Jobbprofil. «Den er jo grei den, er den ikke det da?»"
+    },
+    {
+      "id": "85:706",
+      "participant": 3,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 9059,
+      "y": 2441,
+      "text": "Resonnerer seg frem til at noe er manuelt, annet ikke\n\nForklaring av konsept pga. bug i prototype"
+    },
+    {
+      "id": "85:909",
+      "participant": 3,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 8992,
+      "y": 4480,
+      "text": "Forventer kun en varsling før arbeidstiden starter"
+    },
+    {
+      "id": "85:933",
+      "participant": 3,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 8688,
+      "y": 4736,
+      "text": "Av: Forventer ikke noe annet enn at man logges av."
+    },
+    {
+      "id": "85:940",
+      "participant": 3,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 8656,
+      "y": 4992,
+      "text": "Har ikke behov for varsling ved slutt. \n\n«De fleste husker å gå hjem»"
+    },
+    {
+      "id": "85:919",
+      "participant": 3,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 8992,
+      "y": 4736,
+      "text": "Kunne vært relevant å få varsling på SMS, i tilfelle man ikke har kommet seg til PC eller har appen tilgjengelig"
+    },
+    {
+      "id": "85:926",
+      "participant": 3,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 8992,
+      "y": 4992,
+      "text": "Varsling uten app: Få en SMS hvis man ikke har web oppe\n\n“Det kunne det vært”, litt nølende på akkurat det"
+    },
+    {
+      "id": "89:886",
+      "participant": 3,
+      "task": "Posttest",
+      "category": "negative",
+      "x": 7904,
+      "y": 5936,
+      "text": "Forventer å finne det med av og pålogging særlig under sentralbord."
+    },
+    {
+      "id": "85:950",
+      "participant": 3,
+      "task": "Posttest",
+      "category": "negative",
+      "x": 8864,
+      "y": 6064,
+      "text": "Spesielt køer er ønskelig under køer i sentralbord"
+    },
+    {
+      "id": "85:960",
+      "participant": 3,
+      "task": "Posttest",
+      "category": "negative",
+      "x": 8576,
+      "y": 6064,
+      "text": "V.nr har ikke nødvendigvis noe med køer å gjøre"
+    },
+    {
+      "id": "85:967",
+      "participant": 3,
+      "task": "Posttest",
+      "category": "positive",
+      "x": 8576,
+      "y": 6416,
+      "text": "Plassering OK under Mitt MBN"
+    },
+    {
+      "id": "85:1024",
+      "participant": 3,
+      "task": "Posttest",
+      "category": "positive",
+      "x": 8608,
+      "y": 7040,
+      "text": "Fungerte bra → om \npanel for å legge til ny tidsperiode"
+    },
+    {
+      "id": "85:988",
+      "participant": 3,
+      "task": "Posttest",
+      "category": "neutral",
+      "x": 8896,
+      "y": 6352,
+      "text": "Føler det ble litt fomling i prototype. Men fungerer når man først skjønner det"
+    },
+    {
+      "id": "85:998",
+      "participant": 3,
+      "task": "Posttest",
+      "category": "neutral",
+      "x": 8793,
+      "y": 6720,
+      "text": "Tekster kunne vært tydeligere"
+    },
+    {
+      "id": "85:1008",
+      "participant": 3,
+      "task": "Posttest",
+      "category": "neutral",
+      "x": 8507,
+      "y": 6736,
+      "text": "Navigerer til innstillinger via meny, ikke shortcut i panel"
+    },
+    {
+      "id": "89:974",
+      "participant": 3,
+      "task": "Posttest",
+      "category": "neutral",
+      "x": 8032,
+      "y": 6736,
+      "text": "Usikker på om han ser “endre tidsstyring” i panelet?"
+    },
+    {
+      "id": "89:950",
+      "participant": 3,
+      "task": "Posttest",
+      "category": "neutral",
+      "x": 8912,
+      "y": 7040,
+      "text": "Logikk bra og intuitivt"
+    },
+    {
+      "id": "89:921",
+      "participant": 3,
+      "task": "Posttest",
+      "category": "negative",
+      "x": 7904,
+      "y": 6320,
+      "text": "Noen tekster som kunne vært tydligere"
+    },
+    {
+      "id": "85:1034",
+      "participant": 3,
+      "task": "Posttest",
+      "category": "negative",
+      "x": 8160,
+      "y": 7056,
+      "text": "Status burde vært under sentralbord"
+    },
+    {
+      "id": "103:834",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "negative",
+      "x": 9546,
+      "y": 225,
+      "text": "Bruker mye nøkkelinfo, problem at ansatte ikke kan legge det inn selv. Må inn og gjøre det for hver enkelt. Kan føre til at det settes over til feil"
+    },
+    {
+      "id": "103:884",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "negative",
+      "x": 9546,
+      "y": 784,
+      "text": "Brudd på GDPR med å sende personopplysninger på e-post. Tenker det er innafor via Teams?"
+    },
+    {
+      "id": "103:931",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "negative",
+      "x": 10788,
+      "y": 928,
+      "text": "Merarbeid for seg selv at noen ikke husker å logge seg på køer"
+    },
+    {
+      "id": "97:839",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "negative",
+      "x": 10624,
+      "y": -31,
+      "text": "Kjempejobb for henne å legge inn nøkkelinfo\nØnsker at hver bruker skal kunne gjøre det selv."
+    },
+    {
+      "id": "105:875",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "idea",
+      "x": 10327,
+      "y": -14,
+      "text": "Skulle ønske de også kunne sendt melding i teams.\nInnad i kommunen- skal kun sende teams meldinger og ikke e-post. \nTryggere, og bedre med personopplysninger.\nDirektelink som de kunne sendt til teamsen."
+    },
+    {
+      "id": "103:877",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "idea",
+      "x": 9814,
+      "y": 657,
+      "text": "Meldinger i Teams"
+    },
+    {
+      "id": "106:863",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "idea",
+      "x": 10327,
+      "y": -272,
+      "text": "Ønsker å sende teams-meldinger direkte fra sentralbordet (tryggere enn å sende personopplysninger i en epost)"
+    },
+    {
+      "id": "106:850",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 10327,
+      "y": -544,
+      "text": "Bruker appen når hun stenger sentralbordet.\nBruker sentralbord som sitt hovedverktøy. 10% app og 90% sentralbord.\nBra at man se teams status. Fint å se at bruker har tatt telefonen ved sett over."
+    },
+    {
+      "id": "106:834",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 10085,
+      "y": -544,
+      "text": "Ønsker at brukere selv skal kunne legge inn data om seg selv i Bedriftskatalogen."
+    },
+    {
+      "id": "97:813",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 10624,
+      "y": -576,
+      "text": "Servicetorget - Modum kommune 50%\nSette over til riktig person\n4 år i denne jobben\nVeldig fornøyd\nBrukte Trio før"
+    },
+    {
+      "id": "97:829",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 10624,
+      "y": -295,
+      "text": "700 i katalogen\nBruker nøkkelinfo.\nBruker kun appen i tillegg til sentralbordet\n       (ikke Mitt MBN)"
+    },
+    {
+      "id": "97:894",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 10624,
+      "y": 264,
+      "text": "Tidsstyring:\nAutomatisk pålogget kl. 9 og av 14.\nMå slå seg av manuelt hvis de ikke skal få inn tlf. samtaler f.eks i møter.\nMange er ikke så flinke til å logge seg på selv"
+    },
+    {
+      "id": "95:807",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 9546,
+      "y": -560,
+      "text": "Ser på det som opplæring av seg selv, siden hen skal ha opplæring av nye som skal ta i bruk Sentralbord"
+    },
+    {
+      "id": "95:827",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 9546,
+      "y": -304,
+      "text": "50% Servicetorget i kommune, sitter med sentralbordløsning og svarer på telefoner. Sette over og finne folk som kan hjelpe de som ringer inn.\nSentralbordet er en viktig del av arbeidshverdagen. Jobbet i kommune i 4 år"
+    },
+    {
+      "id": "95:851",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 9546,
+      "y": -31,
+      "text": "Over 100 ansatte, over 700 liggende inne i sentralbord."
+    },
+    {
+      "id": "103:854",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 9546,
+      "y": 481,
+      "text": "Bruker kun app for å stenge sentralbord. Tenker da på MBN-app, ikke Mitt MBN"
+    },
+    {
+      "id": "103:897",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 9788,
+      "y": 928,
+      "text": "98% sentralbord, 2% app. Få ganger hen logger seg av sentralbord og tar med telefonen fordi hen skal gjøre noe annet. Har en standin (lærling?) som tar sentralbord når hen er borte"
+    },
+    {
+      "id": "103:901",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 10030,
+      "y": 928,
+      "text": "Tidsstyring: Har sentralbord oppe fra 9-14, tenker automatisk pålogging og avlogging ihht det."
+    },
+    {
+      "id": "103:914",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 10288,
+      "y": 928,
+      "text": "Byggesak: At de blir automatisk pålogget de dagene de har åpen telefontid (2 dager i uka). Og at de selv må gå inn og slå seg av"
+    },
+    {
+      "id": "103:921",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 10546,
+      "y": 928,
+      "text": "Gevinst: Mange er ikke flinke til å logge seg på, og da blir det merarbeid for hen fordi hen må lete etter ansatte som er pålogget og som kan ta telefonen."
+    },
+    {
+      "id": "95:834",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 9788,
+      "y": -272,
+      "text": "Vært med på overgangen til Telenor, brukte Trio før. Veldig fornøyd med hvordan ting fungerer og overgangen til Telenor."
+    },
+    {
+      "id": "105:840",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 9788,
+      "y": -31,
+      "text": "Sentralbord: bruker bare appen når hun må stenge sentralbordet dersom hun er i møter.  Og når hun skal demonstrere og vise.\n\nSentralbord som hovedverktøy."
+    },
+    {
+      "id": "95:841",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 10030,
+      "y": -272,
+      "text": "Valgte Telenor fordi det er flere muligheter. Opplevde tidl. system som utdatert og ustabilt. Ble tvunget til å bytte. Ikke med på anbudsrunden, men på å ta i bruk etter innkjøp."
+    },
+    {
+      "id": "95:814",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 9788,
+      "y": -544,
+      "text": "Bruker stort sett Sentralbord, ikke app\n\nSnakker om app, forventning om at man skal innom den her?"
+    },
+    {
+      "id": "103:867",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "positive",
+      "x": 9814,
+      "y": 416,
+      "text": "Bra å se statuser fra Teams og Outlook, bekreftelse på at innringer er satt over"
+    },
+    {
+      "id": "105:856",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "positive",
+      "x": 10031,
+      "y": -14,
+      "text": "Fungerer veldig bra at vi ser team-status og outlook. Ser når vi har satt over telefonen. Får frem e-poster."
+    },
+    {
+      "id": "106:891",
+      "participant": 4,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 9546,
+      "y": 1024,
+      "text": "Tidsstyring tolkes som åpningstid på sentralbordet med automatisk inn og utlogging. De som jobber med byggesak skal automatisk logges på kø de dagene de skal betjene telefonen/køen. Automatisk pålogging vil gjøre jobben for sentralbordet lettere (slipper å passe på hvem som er logget på)."
+    },
+    {
+      "id": "97:1043",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 10506,
+      "y": 2928,
+      "text": "SEr ikke Jobbprofil-toggle.\nTror først at hun blir logget ut av kø når hun slår av tidsstyring.  Prøver først å logge ut av køen direkte, men forstår etter litt hjelp at hun kan bruke Jobbprofil for å logge seg ut."
+    },
+    {
+      "id": "106:1005",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 10041,
+      "y": 2176,
+      "text": "Setter opp tidsstyring per kø, med overlappende tidsperioder."
+    },
+    {
+      "id": "97:1002",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 10572,
+      "y": 2433,
+      "text": "Setter opp tidsstyring per kø og ikke per tidsperiode.(Siden mockupen godtar dette blir hun heller ikke ledet til å sette opp styring per periode og ikke per øk)"
+    },
+    {
+      "id": "103:978",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 9778,
+      "y": 2432,
+      "text": "Bruker Mitt MBN kun via telefon, ikke web. Veiledes over."
+    },
+    {
+      "id": "97:932",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 10304,
+      "y": 2224,
+      "text": "Finner naturlig nok kke ut at hun må gå til Mitt MBN for å sette opp tidsstyring\nSer ikke Tidsstyring når hun har kommet inn på Mitt MBN (selv ikke etter tydelig hint! :) )"
+    },
+    {
+      "id": "103:1090",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "idea",
+      "x": 10021,
+      "y": 3840,
+      "text": "Tekst og begrep: At det er egen pålogging, ikke at det påvirker åpningstider før kø"
+    },
+    {
+      "id": "97:1093",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 10264,
+      "y": 2937,
+      "text": "Slår av tidsstyring hvis hun skal jobbe lenger en dag."
+    },
+    {
+      "id": "97:1033",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 10041,
+      "y": 2424,
+      "text": "“Når jeg sitter på sentralbordet så sitter jeg på sentralbordet”"
+    },
+    {
+      "id": "97:992",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 10572,
+      "y": 2159,
+      "text": "Prøver først å legge til tidsstyring på selve køen når hun skal sette opp tidsstyring på Support\nFinner ut av det etterhvert når hun finner Legg til tidsstyring"
+    },
+    {
+      "id": "106:934",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 9804,
+      "y": 1856,
+      "text": "Forventer å finne tidsstyring under “...” på Mine køer ev. under den enkelte kø. Prøver også å gå via Innstillinger på Sentralbordet."
+    },
+    {
+      "id": "106:971",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 10047,
+      "y": 1856,
+      "text": "Forstår godt aktivering av tidsstyring på én kø.\n\nKlarer etterhvert å legge til en annen kø på en ny tidsstyring.æ"
+    },
+    {
+      "id": "97:913",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 10304,
+      "y": 1920,
+      "text": "Prøver å trykke på tre prikker på Mine køer for å finne tidsstyring\nTenker at hun kunne gått inn på hver kø for å sette opp tidsstyring\nPrøver å gå til innstillinger for sentralbordet som ikke virker"
+    },
+    {
+      "id": "103:935",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 9536,
+      "y": 1856,
+      "text": "«Dette er jeg ikke god på» → ser ikke på seg selv som superteknisk anlagt?"
+    },
+    {
+      "id": "103:948",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 9536,
+      "y": 2160,
+      "text": "Sentralbord: Ville gått på Mine køer. Ville aktivert på hver enkelt kø (en kø fra 10-11, en annen fra 12-14)"
+    },
+    {
+      "id": "103:971",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 9536,
+      "y": 2416,
+      "text": "Prøver via Innstillinger"
+    },
+    {
+      "id": "103:982",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 9536,
+      "y": 2672,
+      "text": "Vil fremdeles legge tidsstyring direkte på kø i Mitt MBN, ser ikke Aktiver først. Legger merke til toggle for Jobbprofil og visningsnummer."
+    },
+    {
+      "id": "103:999",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 10021,
+      "y": 2672,
+      "text": "Setter opp tidspunkt og dager, bevisst forhold til v.nr., og tar pålogget-begrepet fint under køer. Setter Automatisk pålogging"
+    },
+    {
+      "id": "103:1012",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 10264,
+      "y": 2672,
+      "text": "Hvor bør jeg gå for å sette opp tidsstyring på en annen kø?"
+    },
+    {
+      "id": "103:1029",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 10021,
+      "y": 2928,
+      "text": "Toggle på kø, resonnerer seg frem til at det kun er pålogget og ikke tidsstyrt,"
+    },
+    {
+      "id": "103:1056",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 10021,
+      "y": 3168,
+      "text": "Setter opp tidsstyring basert på telefontid"
+    },
+    {
+      "id": "106:1105",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 10021,
+      "y": 3456,
+      "text": "Uklart at man måtte inn på Mitt MBN for å sette opp tidsstyring. Men det gjør ingen ting når man først vet det (trenger det da ikke i sentralbord GUI)."
+    },
+    {
+      "id": "106:1070",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 10791,
+      "y": 3296,
+      "text": "Ved utvidet arbeidstid så vil hun skru av Tirdsstyringknappen og forventer å kunne jobbe videre med køanrop."
+    },
+    {
+      "id": "106:1048",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 10264,
+      "y": 3296,
+      "text": "Ser ikke “Jobbprofil” knappen. Tror man logges av midlertididig ved å skru av “Tidsstyringsknappen”."
+    },
+    {
+      "id": "103:1072",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 9536,
+      "y": 3840,
+      "text": "Forventer at man får varsel, logges på, og logges av. Trenger ikke varsel ved avlogging."
+    },
+    {
+      "id": "103:1171",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 9498,
+      "y": 3536,
+      "text": "Overtid: Ville logget av tidsstyring og hatt telefonen åpen (Jobbprofil/køer på). Nevner ekstremvær som eksempel, ikke overtid."
+    },
+    {
+      "id": "103:1076",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 9778,
+      "y": 3840,
+      "text": "Ville satt 14:05 fordi hen ofte sitter i telefon over tiden. Blir usikker på om ting brytes kl 14.   Ville beholdt 14:00 hvis det ikke brytes."
+    },
+    {
+      "id": "103:1107",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 10264,
+      "y": 3536,
+      "text": "Tenker man kan ta bort tidsstyring hvis hen skal i et møte f.eks. Ser at hen er pålogget køer likevel, og tenker da at man må skru av direkte på kø. Kjekt å kunne skru av tidsstyring såpass kjapt."
+    },
+    {
+      "id": "103:1135",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 10311,
+      "y": 3776,
+      "text": "Veiledes til Jobbprofil-toggle. Ser at status endres og at tidsstyring er på."
+    },
+    {
+      "id": "103:989",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 9778,
+      "y": 2672,
+      "text": "Leser Aktivert, ikke Aktiver"
+    },
+    {
+      "id": "103:1049",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 9778,
+      "y": 3168,
+      "text": "Tenker at man tidsstyrer på kønivå"
+    },
+    {
+      "id": "103:1117",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 10544,
+      "y": 3408,
+      "text": "Legger ikke merke til toggle for Jobbprofil.  Hadde ikke sett det heller uten veiledning."
+    },
+    {
+      "id": "103:1022",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 10506,
+      "y": 2672,
+      "text": "Scroll lock, ser ikke hele layouten"
+    },
+    {
+      "id": "103:961",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 9778,
+      "y": 2176,
+      "text": "Om ikke her, så ville hen gått til appen"
+    },
+    {
+      "id": "103:1039",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 9778,
+      "y": 2928,
+      "text": "Når hen først finner funksjon går det helt fint å både opprette første tidsperiode og endre/legge til"
+    },
+    {
+      "id": "106:1083",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 10818,
+      "y": 3559,
+      "text": "Synes tidsstyring virker veldig bra -etter litt prøving. \n\nVeldig oversktlig og fin måte å endre visningnummer på.  Mitt MBN virker veldig bra og ønsker at flere skal bruke tjenesten."
+    },
+    {
+      "id": "103:1097",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 9778,
+      "y": 3456,
+      "text": "Ser status for tidsstyring, og kobler statuser opp mot det."
+    },
+    {
+      "id": "103:1145",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 10601,
+      "y": 3776,
+      "text": "Funker fint å koble seg av sånn. Men gjør Jobbprofil-toggle noe annet enn når man gjør det direkte på kø?"
+    },
+    {
+      "id": "97:976",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 10572,
+      "y": 1920,
+      "text": "Når hun først kommer inn i onboarding går det greit å sette opp denne."
+    },
+    {
+      "id": "102:1077",
+      "participant": 4,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 10818,
+      "y": 3952,
+      "text": "Hun tror til slutt at hun skjønner konseptet, men hun tror at tidsstyringen er per kø. Forsøker også å sette visningsnummer per kø, så hun misforstår det også"
+    },
+    {
+      "id": "105:948",
+      "participant": 4,
+      "task": "Posttest",
+      "category": "negative",
+      "x": 9520,
+      "y": 5904,
+      "text": "Virker som det er behov for opplæring"
+    },
+    {
+      "id": "103:1257",
+      "participant": 4,
+      "task": "Posttest",
+      "category": "negative",
+      "x": 10208,
+      "y": 5952,
+      "text": "Endring: Står ingenting øverst i panel om hvilke kø man endrer."
+    },
+    {
+      "id": "103:1264",
+      "participant": 4,
+      "task": "Posttest",
+      "category": "negative",
+      "x": 10480,
+      "y": 5952,
+      "text": "Tenker det er tidsstyring per kø."
+    },
+    {
+      "id": "103:1184",
+      "participant": 4,
+      "task": "Posttest",
+      "category": "positive",
+      "x": 9648,
+      "y": 6240,
+      "text": "Virker bra. Bare man har vært gjennom det noen ganger, så virker det enkelt."
+    },
+    {
+      "id": "103:1204",
+      "participant": 4,
+      "task": "Posttest",
+      "category": "positive",
+      "x": 9648,
+      "y": 6528,
+      "text": "Enkelt å forstå"
+    },
+    {
+      "id": "103:1211",
+      "participant": 4,
+      "task": "Posttest",
+      "category": "positive",
+      "x": 9904,
+      "y": 6528,
+      "text": "Stoler på at tidsstyring fungerer når det er satt opp"
+    },
+    {
+      "id": "103:1250",
+      "participant": 4,
+      "task": "Posttest",
+      "category": "positive",
+      "x": 10208,
+      "y": 6544,
+      "text": "Oversiktlig, bra at man kan endre v.nr. kjapt"
+    },
+    {
+      "id": "103:1194",
+      "participant": 4,
+      "task": "Posttest",
+      "category": "neutral",
+      "x": 9904,
+      "y": 6256,
+      "text": "Skal se mer på Mitt MBN og lære seg det mer. Generelt positiv."
+    },
+    {
+      "id": "103:1218",
+      "participant": 4,
+      "task": "Posttest",
+      "category": "neutral",
+      "x": 10176,
+      "y": 6256,
+      "text": "Jeg må huske å gå inn på Mitt MBN for å endre tidsstyring, det fikk jeg ikke gjort via Sentralbordet. Har ingenting å si for egen del at man ikke kan gjøre det via Sentralbord."
+    },
+    {
+      "id": "103:1289",
+      "participant": 4,
+      "task": "Posttest",
+      "category": "neutral",
+      "x": 10736,
+      "y": 5952,
+      "text": "Ser etter hvert at det er mer generelt, og at man har alle køer listet opp i panel. Virker fremdeles litt som at hen tenker det er per kø man gjør valgene"
+    },
+    {
+      "id": "103:1238",
+      "participant": 4,
+      "task": "Posttest",
+      "category": "idea",
+      "x": 10448,
+      "y": 6256,
+      "text": "Recognition rather than recall!"
+    },
+    {
+      "id": "97:1185",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "negative",
+      "x": 11636,
+      "y": -592,
+      "text": "Tungvint når man er i møter at man både må sette seg i møtet med viderekobling. og logge ut av køer."
+    },
+    {
+      "id": "105:1144",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "negative",
+      "x": 11880,
+      "y": -64,
+      "text": "Møter: må gå fysisk inn å sette seg borte når han er på møter. Mobilen skjønner det ved å sette seg på lydløs, men sentralbord setter de gjennom alikevel\n\nIkke synkronisert mitt mbn og sentralbord- ønsker at disse er synkronisert"
+    },
+    {
+      "id": "103:1389",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "idea",
+      "x": 11395,
+      "y": 512,
+      "text": "Mikroview/overlay: Sentralbord som ligger over alle programmer"
+    },
+    {
+      "id": "111:1208",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "idea",
+      "x": 12160,
+      "y": -539,
+      "text": "Ønsker å kunne kolapse sentralbordet nede i hjørnet med “over lay”"
+    },
+    {
+      "id": "111:1173",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "idea",
+      "x": 12160,
+      "y": -809,
+      "text": "At køanrop tar hensyn til aktive fravær."
+    },
+    {
+      "id": "103:1329",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 11152,
+      "y": -64,
+      "text": "Inne på felles sentralbord kun når de andre som gjør det er opptatt eller det er veldig mye trykk på telefonen"
+    },
+    {
+      "id": "103:1359",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 11152,
+      "y": 192,
+      "text": "Må fysisk sette seg i møte.   Koble seg av møtestatus, og da følger ikke Sentralbord etter"
+    },
+    {
+      "id": "103:1393",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 11152,
+      "y": 768,
+      "text": "Tidsstyring: Usikker på hva det er, skjønner ikke helt begrepet.   Har køer som er åpen 9-15, lurer på om det kan være noe automatikk knyttet til det"
+    },
+    {
+      "id": "103:1409",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 11394,
+      "y": 768,
+      "text": "Logger seg på sentralbordet når andre går til lunsj, ser at det står folk i kø"
+    },
+    {
+      "id": "103:1416",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 11638,
+      "y": 768,
+      "text": "Ser at folk glemmer å logge seg på kø. Det er 3 pers. som skal være på, men opplever at hen ofte er alene. Logger da de andre på"
+    },
+    {
+      "id": "103:1373",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "negative",
+      "x": 11152,
+      "y": 512,
+      "text": "Responsivitet: Har flere faner ved siden av hverandre, men opplever at responsivitet i Mitt MBN ikke fungerer likt som på Sentralbord. Bruker splitview i browser"
+    },
+    {
+      "id": "103:1363",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 11394,
+      "y": 192,
+      "text": "Forventer synkronisering av statuser mellom løsningene"
+    },
+    {
+      "id": "105:1175",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 11880,
+      "y": 292,
+      "text": "Skjønner ikke helt hva begrepet “tidsstyring” er.\n\nHøres ut som en automatikk av inn og utlogging av kø"
+    },
+    {
+      "id": "103:1333",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 11395,
+      "y": -64,
+      "text": "Er på andre køer i tillegg, men der er det et fåtall samtaler per dag"
+    },
+    {
+      "id": "103:1340",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 11638,
+      "y": -64,
+      "text": "Mest inne på Mitt MBN, Sentralbord kun behovsbasert"
+    },
+    {
+      "id": "97:1210",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 11638,
+      "y": 192,
+      "text": "har ingen klar formening om hva tidsstyring er\nlogger ofte på andre selv fordi andre ikke gjør det selv"
+    },
+    {
+      "id": "111:1154",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 11394,
+      "y": -592,
+      "text": "Jobber prosjketleder. Har avdelinger i hele nordland og troms. ca 300 ansatte. Driver med transport, miljø, avfall. Bruker Sentralbordet når operatører er opptatte eller ved stor trafikk. Bruker mest MBN appen. \nHar brukt sentralbordet i mange år (over 5 år). Er inne på MBN appen hele tiden.  Er mest på Mitt MBN sml med sentralbordet,"
+    },
+    {
+      "id": "97:1151",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 11880,
+      "y": -592,
+      "text": "Prosjektleder\nAvdelinger i  Nordland og Troms\n300 ansatte\nTransport, miljø, avfall\nDaglig bruker av sentalbord\nPå noen køer hele tiden\n10-15 arop per dag\nHar brukt MBN i over 5 år.\nInnom appen hele tiden\nBruker Mitt MBN også"
+    },
+    {
+      "id": "105:1112",
+      "participant": 5,
+      "task": "Bli kjent",
+      "category": "neutral",
+      "x": 11152,
+      "y": -592,
+      "text": "Prosjektleder i Høsbø?\nNordland og Troms avdelinger\nca 300 ansatte fordelt på stasjonene.\nTransport, miljø, avfall og industri\n\nSentralbord når andre sentralbord er på møter, evnt stort trykk på sentralbordet.\n\nBruker mest MBN appen. På web og mobil.\n\nBrukt det i mange år, litt usikker. ca over 5 år."
+    },
+    {
+      "id": "97:1286",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 12176,
+      "y": 2464,
+      "text": "Finner ikke helt ut hvordan han kan legge til en ny tidsperiode kun for fredag. (Blir litt forvirret av at mockup tillater overlappende perioder)\nFinner ut etterhvert hvordan han"
+    },
+    {
+      "id": "105:1216",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 11436,
+      "y": 1936,
+      "text": "Finner ikke knappen “aktiver”. Ønsker å legge det pr kø."
+    },
+    {
+      "id": "105:1260",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 11654,
+      "y": 2870,
+      "text": "Finner ikke “endre tidsperioder” i panelet. Går til innstillinger"
+    },
+    {
+      "id": "103:1529",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 11654,
+      "y": 3110,
+      "text": "Rekkefølge på dager (pills) er feil"
+    },
+    {
+      "id": "105:1279",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 11896,
+      "y": 2870,
+      "text": "Får hjelp/opplæring i å lage egne tidsperioder for enkeltdager"
+    },
+    {
+      "id": "97:1242",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "negative",
+      "x": 11896,
+      "y": 2192,
+      "text": "Ser ikke Tidsstyring\nForsøkter å finne tidsstyring per kø\nFinner til slutt Tidsstyring / aktiver"
+    },
+    {
+      "id": "105:1241",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "idea",
+      "x": 11424,
+      "y": 2643,
+      "text": "Ønsker å sette flere tidsperioder under opprettelse (wizzard). \n\n1 er ikke nok, plass på desktop til dette"
+    },
+    {
+      "id": "113:1143",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 12192,
+      "y": 1920,
+      "text": "Bør komme tydeligere frem at man må sette opp tidsperioder etter tur, dvs kan ikke sette opp hele uken samtidig (ved ulike tider og køer)."
+    },
+    {
+      "id": "97:1255",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 11896,
+      "y": 2464,
+      "text": "Tror han kan klikke på ikonene i info-skjermen for onboarding\nLurer på om han kan sette opp ulike tidsperioder per dag i onboarding. (ser ikke infotekst om at dette kan gjøres senere under innsti)\nOnboardingen forøvrig går ok"
+    },
+    {
+      "id": "103:1426",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 11194,
+      "y": 1936,
+      "text": "Navigerer selv rett til Mitt MBN, ser at det står tidsstyring men ikke Aktiver"
+    },
+    {
+      "id": "103:1436",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 11194,
+      "y": 2176,
+      "text": "Blir usikker på hvor det aktiveres. Fomler litt nede på køer, men finner knapp etter hvert."
+    },
+    {
+      "id": "97:1226",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 11896,
+      "y": 1920,
+      "text": "Spør om han skal sette det opp på mitt mbn eller sentralbord\nSer ganske raskt at det er i Mitt MBN"
+    },
+    {
+      "id": "103:1516",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 11424,
+      "y": 3110,
+      "text": "Finner Legg til tidsperiode"
+    },
+    {
+      "id": "105:1313",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "positive",
+      "x": 11750,
+      "y": 3350,
+      "text": "Glad for at teams er kommet inn"
+    },
+    {
+      "id": "103:1452",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 11194,
+      "y": 2416,
+      "text": "Leser intro i wizard: Trodde det var mulig å interagere med punktene"
+    },
+    {
+      "id": "103:1472",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 11424,
+      "y": 2416,
+      "text": "Dager: Spør om det er mulig å tilpasse hver enkelt dag i wizard"
+    },
+    {
+      "id": "103:1485",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 11194,
+      "y": 2870,
+      "text": "Aktivering fungerer fint"
+    },
+    {
+      "id": "103:1489",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 11424,
+      "y": 2870,
+      "text": "Har behov for å tilpasse dager"
+    },
+    {
+      "id": "105:1292",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 11472,
+      "y": 3350,
+      "text": "Bruker brødsmuler"
+    },
+    {
+      "id": "105:1330",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 12016,
+      "y": 3350,
+      "text": "Vil se hvor dem kommer fra. vet ikke om de er overført eller ringer direkte i anropsloggen"
+    },
+    {
+      "id": "103:1496",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 11194,
+      "y": 3110,
+      "text": "Leter litt etter Innstillinger, navigerer til Meny"
+    },
+    {
+      "id": "103:1536",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "neutral",
+      "x": 11194,
+      "y": 3350,
+      "text": "«Hvordan går jeg ut?»"
+    },
+    {
+      "id": "103:1465",
+      "participant": 5,
+      "task": "Oppgave 1",
+      "category": "idea",
+      "x": 11194,
+      "y": 2643,
+      "text": "Tekst: Påpeke telefonttid, ikke arbeidstid"
+    },
+    {
+      "id": "103:1572",
+      "participant": 5,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 11168,
+      "y": 4512,
+      "text": "Forventer at det hen har satt opp blir gjort"
+    },
+    {
+      "id": "103:1598",
+      "participant": 5,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 11168,
+      "y": 4768,
+      "text": "Vaktkø: Ikke noe av og på, er bare på"
+    },
+    {
+      "id": "103:1608",
+      "participant": 5,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 11168,
+      "y": 5024,
+      "text": "Regner med at når noen blir satt over til hen, så kommer de gjennom. Uavh. av tidsstyring"
+    },
+    {
+      "id": "103:1615",
+      "participant": 5,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 11399,
+      "y": 5024,
+      "text": "Unødvendig med varsel ved avlogging. Med mindre man kan forlenge pålogging der?"
+    },
+    {
+      "id": "103:1588",
+      "participant": 5,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 11399,
+      "y": 4512,
+      "text": "Greit å få varsel om at man har blitt koblet på  Og kunne pause hvis hen ikke er ferdig med andre ting først"
+    },
+    {
+      "id": "97:1357",
+      "participant": 5,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 11891,
+      "y": 4768,
+      "text": "Er ofte pålogget vaktkø døgnet rundt. Da vil han bli avlogget denne køen også dersom han aktiverer tidsstyring."
+    },
+    {
+      "id": "97:1347",
+      "participant": 5,
+      "task": "Oppgave 2",
+      "category": "neutral",
+      "x": 11891,
+      "y": 4512,
+      "text": "Forventer varsel i forkant av pålogging og mulighet for å utsette pålogging"
+    },
+    {
+      "id": "103:1622",
+      "participant": 5,
+      "task": "Posttest",
+      "category": "neutral",
+      "x": 11200,
+      "y": 5904,
+      "text": "«Jeg slet jo ikke så mye med å skjønne det»"
+    },
+    {
+      "id": "103:1653",
+      "participant": 5,
+      "task": "Posttest",
+      "category": "neutral",
+      "x": 11200,
+      "y": 6160,
+      "text": "«Ingenting som ikke fungerte», men veiledes for å sette opp riktig"
+    },
+    {
+      "id": "103:1660",
+      "participant": 5,
+      "task": "Posttest",
+      "category": "positive",
+      "x": 11440,
+      "y": 6160,
+      "text": "Ser behovet for tidsstyring etter å ha fått konsept presentert.  Bra at man slipper å gjøre ting selv."
+    },
+    {
+      "id": "103:1629",
+      "participant": 5,
+      "task": "Posttest",
+      "category": "negative",
+      "x": 11440,
+      "y": 5904,
+      "text": "Burde kunne valgt alt når man først aktiverer, ikke gå inn i ettertid for å justere"
+    },
+    {
+      "id": "103:1639",
+      "participant": 5,
+      "task": "Posttest",
+      "category": "negative",
+      "x": 11696,
+      "y": 5904,
+      "text": "Uten veil. til innstillinger ville det ikke blitt oppdaget"
+    },
+    {
+      "id": "103:1646",
+      "participant": 5,
+      "task": "Posttest",
+      "category": "idea",
+      "x": 11952,
+      "y": 5904,
+      "text": "På web er det plass til å gjøre mer samtidig første gang"
+    },
+    {
+      "id": "97:1388",
+      "participant": 5,
+      "task": "Posttest",
+      "category": "positive",
+      "x": 11696,
+      "y": 6160,
+      "text": "Ser at det er et behov for tidsstyring nå når han ser hva det er."
+    }
+  ]
+}
