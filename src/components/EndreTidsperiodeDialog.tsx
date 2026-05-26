@@ -411,16 +411,23 @@ function TimeInput({
   onChange: (v: string) => void;
   ariaLabel: string;
 }) {
+  const inputRef = useRef<HTMLInputElement>(null);
   return (
     <div className="relative flex items-center">
       <input
+        ref={inputRef}
         type="time"
         value={value}
         onChange={(e) => onChange(e.target.value)}
         aria-label={ariaLabel}
         className="h-12 w-[142px] appearance-none rounded-lg border border-ink-200 bg-surface pl-4 pr-10 text-lg font-light text-ink-800 outline-none transition focus:border-brand-500 [&::-webkit-calendar-picker-indicator]:opacity-0"
       />
-      <Clock size={18} strokeWidth={1.75} className="pointer-events-none absolute right-3 text-ink-500" />
+      <Clock
+        size={18}
+        strokeWidth={1.75}
+        className="absolute right-3 cursor-pointer text-ink-500"
+        onClick={() => inputRef.current?.showPicker()}
+      />
     </div>
   );
 }

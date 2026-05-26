@@ -733,9 +733,11 @@ function TimeInput({
   onChange: (v: string) => void;
   ariaLabel: string;
 }) {
+  const inputRef = useRef<HTMLInputElement>(null);
   return (
     <div className="relative flex items-center">
       <input
+        ref={inputRef}
         type="time"
         value={value}
         onChange={(e) => onChange(e.target.value)}
@@ -745,7 +747,8 @@ function TimeInput({
       <Clock
         size={18}
         strokeWidth={1.75}
-        className="pointer-events-none absolute right-3 text-ink-400"
+        className="absolute right-3 cursor-pointer text-ink-400"
+        onClick={() => inputRef.current?.showPicker()}
       />
     </div>
   );
