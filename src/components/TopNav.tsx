@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Bell, MessageSquare, Pause, LogOut, Menu } from 'lucide-react';
 import { NavSidebar } from './NavSidebar';
+import { AvsluttDialog } from './AvsluttDialog';
 
 function TelenorLogo() {
   return (
@@ -16,12 +17,14 @@ interface TopNavProps {
   activeTab: NavTab;
   onTabChange: (t: NavTab) => void;
   onLogout: () => void;
+  onLogoutQueues: () => void;
   onSimulate: () => void;
   onSettings: () => void;
 }
 
-export function TopNav({ activeTab, onTabChange, onLogout, onSimulate, onSettings }: TopNavProps) {
+export function TopNav({ activeTab, onTabChange, onLogout, onLogoutQueues, onSimulate, onSettings }: TopNavProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [avsluttOpen, setAvsluttOpen] = useState(false);
 
   return (
     <header className="flex h-[60px] shrink-0 items-center justify-between border-b border-ink-200 bg-surface px-4">
@@ -39,6 +42,19 @@ export function TopNav({ activeTab, onTabChange, onLogout, onSimulate, onSetting
       </div>
 
       {sidebarOpen && <NavSidebar onClose={() => setSidebarOpen(false)} onReset={onLogout} onSimulate={onSimulate} onSettings={onSettings} />}
+
+      {avsluttOpen && (
+        <AvsluttDialog
+          onClose={() => setAvsluttOpen(false)}
+          onAvslutt={({ logoutQueues, logoutUser }) => {
+            if (logoutUser) {
+              onLogout();
+            } else if (logoutQueues) {
+              onLogoutQueues();
+            }
+          }}
+        />
+      )}
 
       {/* Centre: segmented control */}
       <div className="flex items-center gap-1 rounded-full bg-ink-200 p-1">
@@ -87,11 +103,11 @@ export function TopNav({ activeTab, onTabChange, onLogout, onSimulate, onSetting
 
         <button
           type="button"
-          onClick={onLogout}
+          onClick={() => setAvsluttOpen(true)}
           className="flex h-9 items-center gap-1.5 rounded-full px-4 text-sm font-medium text-brand-500 hover:bg-brand-50 transition"
         >
           <LogOut size={14} strokeWidth={2} />
-          Logg ut
+          Avslutt
         </button>
       </div>
     </header>

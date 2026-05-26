@@ -13,6 +13,7 @@ interface Actions {
   setExternalOnly: (v: boolean) => void;
   toggleQueueActive: (queueId: string) => void;
   setQueuesActive: (states: Record<string, boolean>) => void;
+  logoutQueues: () => void;
   reset: () => void;
   // Multi-period actions
   addTimePeriod: (period: Omit<TimePeriod, 'id'>) => void;
@@ -47,6 +48,7 @@ const initialState: JobProfileState = {
   ],
   timePeriods: [],
   lastActiveQueueIds: [],
+  lastSessionQueueIds: [],
 };
 
 export const useJobProfile = create<JobProfileState & Actions>()(
@@ -123,6 +125,15 @@ export const useJobProfile = create<JobProfileState & Actions>()(
                 : Math.max(q.operatorsActive - 1, 0),
             };
           }),
+        })),
+      logoutQueues: () =>
+        set((s) => ({
+          lastSessionQueueIds: s.queues.filter((q) => q.active).map((q) => q.id),
+          queues: s.queues.map((q) =>
+            q.active
+              ? { ...q, active: false, operatorsActive: Math.max(q.operatorsActive - 1, 0) }
+              : q,
+          ),
         })),
       reset: () => set(initialState),
 
@@ -206,7 +217,7 @@ export const useJobProfile = create<JobProfileState & Actions>()(
     }),
     {
       name: 'jobbprofil-state',
-      version: 10,
+      version: 11,
     },
   ),
 );

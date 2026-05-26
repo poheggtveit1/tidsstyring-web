@@ -60,6 +60,9 @@ export interface JobProfileState {
   // IDs of queues that were active before Jobbprofil was disabled — used to restore on re-enable
   lastActiveQueueIds: string[];
 
+  // IDs of queues the user last chose when starting a session — never wiped by logout
+  lastSessionQueueIds: string[];
+
   // Multiple time periods
   timePeriods: TimePeriod[];
 }

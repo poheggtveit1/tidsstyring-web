@@ -10,7 +10,9 @@ import { SettingsPage } from './components/SettingsPage';
 import { IKoPanel } from './components/IKoPanel';
 import { MineKoerPanel } from './components/MineKoerPanel';
 import { TidsstyrtPaaloggingDialog } from './components/TidsstyrtPaaloggingDialog';
+import { SentralbordStartPage } from './components/SentralbordStartPage';
 import { TidsstyringDialog } from './components/TidsstyringDialog';
+import { computeTidsstyringStatus } from './utils/tidsstyringStatus';
 
 type AppView = 'main' | 'settings';
 
@@ -19,15 +21,19 @@ export default function App() {
   const [rightCollapsed, setRightCollapsed] = useState(false);
   const [view, setView] = useState<AppView>('main');
   const [showSimulateDialog, setShowSimulateDialog] = useState(false);
+  const [sentralbordStarted, setSentralbordStarted] = useState(false);
   const [showTidsstyringWizard, setShowTidsstyringWizard] = useState(false);
   const reset = useJobProfile((s) => s.reset);
   const setEnabled = useJobProfile((s) => s.setEnabled);
   const setQueuesActive = useJobProfile((s) => s.setQueuesActive);
+  const logoutQueues    = useJobProfile((s) => s.logoutQueues);
   const setTidsstyringActive = useJobProfile((s) => s.setTidsstyringActive);
   const setSelectedDisplayNumber = useJobProfile((s) => s.setSelectedDisplayNumber);
   const timePeriods = useJobProfile((s) => s.timePeriods);
-  const finalizeWizardPeriod = useJobProfile((s) => s.finalizeWizardPeriod);
+  const finalizeWizardPeriod  = useJobProfile((s) => s.finalizeWizardPeriod);
   const tidsstyringConfigured = useJobProfile((s) => s.tidsstyringConfigured);
+  const tidsstyringActive     = useJobProfile((s) => s.tidsstyringActive);
+  const { inPeriod } = computeTidsstyringStatus(timePeriods, tidsstyringActive);
 
   function handleOpenTidsstyring() {
     if (tidsstyringConfigured) {
@@ -59,12 +65,20 @@ export default function App() {
     setNavTab('sentralbord');
     setRightCollapsed(false);
     setView('main');
+    setSentralbordStarted(false);
   }
 
   return (
     <div className="flex h-screen flex-col overflow-hidden bg-surface-alt">
       {/* Top nav */}
-      <TopNav activeTab={navTab} onTabChange={(t) => { setNavTab(t); setView('main'); }} onLogout={handleLogout} onSimulate={handleSimulate} onSettings={() => { setNavTab('mitt-mbn'); setView('settings'); }} />
+      <TopNav
+        activeTab={navTab}
+        onTabChange={(t) => { setNavTab(t); setView('main'); }}
+        onLogout={handleLogout}
+        onLogoutQueues={() => { logoutQueues(); setEnabled(false); setSentralbordStarted(false); }}
+        onSimulate={handleSimulate}
+        onSettings={() => { setNavTab('mitt-mbn'); setView('settings'); }}
+      />
 
       {showSimulateDialog && (
         <TidsstyrtPaaloggingDialog
@@ -87,6 +101,13 @@ export default function App() {
 
       {view === 'settings' ? (
         <SettingsPage onBack={() => setView('main')} />
+      ) : navTab === 'sentralbord' && !sentralbordStarted ? (
+        /* ── Sentralbord startside ─────────────────────────────────── */
+        <SentralbordStartPage
+          onStart={() => setSentralbordStarted(true)}
+          queuesReadOnly={tidsstyringActive && inPeriod}
+        />
+
       ) : navTab === 'sentralbord' ? (
         /* ── Sentralbord layout ────────────────────────────────────── */
         <div key="sentralbord" className="animate-tab-enter flex flex-1 gap-3 overflow-hidden p-3 md:gap-4 md:p-4">
