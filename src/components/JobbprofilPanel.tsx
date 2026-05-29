@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { MoreVertical, Clock } from 'lucide-react';
+import { MoreHorizontal, Clock } from 'lucide-react';
 import { Toast } from './Toast';
 import { useJobProfile } from '../store/jobProfileStore';
 import { Toggle } from './Toggle';
@@ -110,12 +110,19 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
             onClick={() => setMenuOpen((v) => !v)}
             className="rounded-full p-1 text-brand-500 transition hover:bg-brand-50"
           >
-            <MoreVertical size={18} strokeWidth={2} />
+            <MoreHorizontal size={18} strokeWidth={2} />
           </button>
 
           {/* Context menu */}
           {menuOpen && (
-            <div className="absolute right-0 top-full z-50 mt-1 w-[293px] overflow-hidden rounded-[8px] bg-white shadow-[0_2px_8px_rgba(0,26,102,0.10),0_4px_16px_rgba(0,26,102,0.05),0_1px_3px_rgba(0,26,102,0.02)]">
+            <div className="absolute right-0 top-full z-50 mt-1 w-[240px] rounded-[10px] border border-[#7C88AB]/40 bg-white py-2">
+              <button
+                type="button"
+                onClick={() => setMenuOpen(false)}
+                className="flex h-[49px] w-full items-center px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
+              >
+                Anropsdistribusjon
+              </button>
               <button
                 type="button"
                 onClick={() => {
@@ -126,10 +133,9 @@ export function JobbprofilPanel({ onNavigateToSettings }: Props) {
                     setWizardOpen(true);
                   }
                 }}
-                className="flex h-[49px] w-full items-center gap-2 border-x border-[#7C88AB]/30 px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
+                className="flex h-[49px] w-full items-center px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
               >
-                <Clock size={16} strokeWidth={1.5} className="text-ink-500" />
-                Tidsstyring
+                Aktiver tidsstyring
               </button>
             </div>
           )}
