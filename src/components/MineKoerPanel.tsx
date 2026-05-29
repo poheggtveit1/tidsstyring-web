@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Clock, Headphones, MoreHorizontal, PhoneForwarded } from 'lucide-react';
+import { Headphones, MoreHorizontal } from 'lucide-react';
 import { useJobProfile } from '../store/jobProfileStore';
 import { Toggle } from './Toggle';
 import { computeTidsstyringStatus } from '../utils/tidsstyringStatus';
@@ -48,22 +48,20 @@ export function MineKoerPanel({ onOpenTidsstyring }: Props) {
             <MoreHorizontal size={18} strokeWidth={2} />
           </button>
           {menuOpen && (
-            <div className="absolute right-0 top-full z-50 mt-1 w-[220px] overflow-hidden rounded-[8px] bg-white shadow-[0_2px_8px_rgba(0,26,102,0.10),0_4px_16px_rgba(0,26,102,0.05)]">
+            <div className="absolute right-0 top-full z-50 mt-1 w-[240px] rounded-[10px] border border-[#7C88AB]/40 bg-white py-2">
               <button
                 type="button"
-                className="flex h-[49px] w-full items-center gap-2 border-x border-t border-[#7C88AB]/30 px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
+                className="flex h-[49px] w-full items-center px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
                 onClick={() => setMenuOpen(false)}
               >
-                <PhoneForwarded size={16} strokeWidth={1.5} className="text-ink-500" />
                 Anropsdistribusjon
               </button>
               <button
                 type="button"
-                className="flex h-[49px] w-full items-center gap-2 border-x border-t border-b border-[#7C88AB]/30 px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
+                className="flex h-[49px] w-full items-center px-5 text-base font-light text-ink-800 transition hover:bg-surface-alt"
                 onClick={() => { setMenuOpen(false); onOpenTidsstyring?.(); }}
               >
-                <Clock size={16} strokeWidth={1.5} className="text-ink-500" />
-                Tidsstyring
+                Aktiver tidsstyring
               </button>
             </div>
           )}
