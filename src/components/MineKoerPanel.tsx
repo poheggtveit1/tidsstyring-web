@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Clock, Headphones, MoreHorizontal, MoreVertical, PhoneForwarded } from 'lucide-react';
+import { Clock, Headphones, MoreHorizontal, PhoneForwarded } from 'lucide-react';
 import { useJobProfile } from '../store/jobProfileStore';
 import { Toggle } from './Toggle';
 import { computeTidsstyringStatus } from '../utils/tidsstyringStatus';
@@ -23,9 +23,7 @@ export function MineKoerPanel({ onOpenTidsstyring }: Props) {
   useEffect(() => {
     if (!menuOpen) return;
     function handleClick(e: MouseEvent) {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
-        setMenuOpen(false);
-      }
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) setMenuOpen(false);
     }
     document.addEventListener('mousedown', handleClick);
     return () => document.removeEventListener('mousedown', handleClick);
@@ -47,7 +45,7 @@ export function MineKoerPanel({ onOpenTidsstyring }: Props) {
             aria-label="Alternativer"
             onClick={() => setMenuOpen((v) => !v)}
           >
-            <MoreVertical size={18} strokeWidth={2} />
+            <MoreHorizontal size={18} strokeWidth={2} />
           </button>
           {menuOpen && (
             <div className="absolute right-0 top-full z-50 mt-1 w-[220px] overflow-hidden rounded-[8px] bg-white shadow-[0_2px_8px_rgba(0,26,102,0.10),0_4px_16px_rgba(0,26,102,0.05)]">
